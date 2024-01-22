@@ -1,0 +1,21 @@
+
+Pragmas
+-------
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`PLC_UED_SDS <PLC_UED_SDS_overview_pragmas>`, 16, 0
+
+
+.. _PLC_UED_SDS_overview_pragmas:
+
+
+PLC_UED_SDS
+^^^^^^^^^^^
+
+Total pragmas found: 16
+Total linter errors: 0
+
+
