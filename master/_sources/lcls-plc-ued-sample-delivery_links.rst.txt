@@ -1,0 +1,20 @@
+
+Links
+-----
+
+.. csv-table::
+    :header: Owner A, Item A, Owner B, Item B
+    :align: center
+
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_STC_01.bError, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314), TC Inputs Channel 1^Status^Error
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_STC_01.bOverrange, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314), TC Inputs Channel 1^Status^Overrange
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_STC_01.bUnderrange, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314), TC Inputs Channel 1^Status^Underrange
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_STC_01.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314), TC Inputs Channel 1^Value
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_VRC_01.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004), Channel 1^Input
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004), Channel 2^Input
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_VRC_03.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004), Channel 3^Input
+        PLC_UED_SDS Instance, PlcTask Inputs^GVL_RCC.RCC_VRC_04.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004), Channel 4^Input
+        PLC_UED_SDS Instance, PlcTask Outputs^GVL_RCC.RCC_VRC_01.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004), Channel 1^Output
+        PLC_UED_SDS Instance, PlcTask Outputs^GVL_RCC.RCC_VRC_02.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004), Channel 2^Output
+        PLC_UED_SDS Instance, PlcTask Outputs^GVL_RCC.RCC_VRC_03.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004), Channel 3^Output
+        PLC_UED_SDS Instance, PlcTask Outputs^GVL_RCC.RCC_VRC_04.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004), Channel 4^Output
