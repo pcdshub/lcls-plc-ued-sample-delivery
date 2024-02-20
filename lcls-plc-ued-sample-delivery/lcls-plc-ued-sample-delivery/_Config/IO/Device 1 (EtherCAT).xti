@@ -30,11 +30,8 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Box File="Term 1 (EK1200).xti" Id="1">
+		<Box File="Term 4 (EK1200).xti" Id="4">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
-		</Box>
-		<Box File="RCC Valves (EP2338-0001).xti" Id="3">
-			<EtherCAT PortABoxInfo="#x01000002"/>
 		</Box>
 		<EtherCAT/>
 	</Device>
