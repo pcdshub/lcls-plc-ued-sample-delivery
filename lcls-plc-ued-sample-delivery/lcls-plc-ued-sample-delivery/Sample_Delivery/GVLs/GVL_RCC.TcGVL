@@ -9,30 +9,30 @@
     (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:01 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output'}
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output'}
     RCC_VRC_01 : FB_VRC_NC_ClsLS;
 
     (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '}
-    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
-                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
-                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
     RCC_VRC_02 : FB_VRC;
 
     (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:03 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output'}
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output'}
     RCC_VRC_03 : FB_VRC_NC_ClsLS;
 
     (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:04 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output'}
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output'}
     RCC_VRC_04 : FB_VRC_NC_ClsLS;
 
 
@@ -46,10 +46,10 @@
 
 
     {attribute 'pytmc' :=' pv: UED:RCC:TC:01 '}
-    {attribute 'TcLinkTo' := ' .bError 		:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Error;
-                               .bUnderrange :=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Underrange;
-                               .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
-                               .iRaw		:= TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value '}
+    {attribute 'TcLinkTo' := ' .bError 		:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Error;
+                               .bUnderrange :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Underrange;
+                               .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
+                               .iRaw		:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value '}
    RCC_STC_01 : FB_TempSensor;
 END_VAR]]></Declaration>
   </GVL>

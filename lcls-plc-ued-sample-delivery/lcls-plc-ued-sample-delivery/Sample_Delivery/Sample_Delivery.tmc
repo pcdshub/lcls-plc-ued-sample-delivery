@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{8C0C43A3-55B3-9E13-9D21-9BF9B6DCDB12}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{C4715E97-4825-C916-1BAC-52AA2F22B4E3}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -24488,12 +24488,6 @@ interlocking logic outside this function block.
             <BitOffs>625199904</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_RCC.RCC_VRC_01_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>625199912</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_TcUnit.NumberOfInitializedTestSuites</Name>
             <Comment> The assert function block instance should be 1:1 mapped to
        the test suite instance path. </Comment>
@@ -24648,12 +24642,6 @@ interlocking logic outside this function block.
               </Property>
             </Properties>
             <BitOffs>633569136</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_RCC.RCC_VRC_02_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>633569176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.g_DummyVG</Name>
@@ -25368,18 +25356,6 @@ interlocking logic outside this function block.
             <BitOffs>633583072</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_RCC.RCC_VRC_03_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>633583088</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_RCC.RCC_VRC_04_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>633583096</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>PMPS_PARAM.MAX_ASSERTIONS</Name>
             <Comment>Maximum number of BP requests in the arbiter</Comment>
             <BitSize>32</BitSize>
@@ -25576,21 +25552,6 @@ interlocking logic outside this function block.
             <BitOffs>633591136</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Default>
-              <Value>10</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: UED:GCP:01:INLK_Setpoint </Value>
-              </Property>
-            </Properties>
-            <BitOffs>633629280</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_RCC.xSystemOverrideMode_RCC</Name>
             <Comment> OverrideMode </Comment>
             <BitSize>8</BitSize>
@@ -25681,8 +25642,8 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output</Value>
+                <Value>.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -25702,9 +25663,9 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
-                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
-                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output</Value>
+                <Value>.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -25724,8 +25685,8 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output</Value>
+                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -25745,8 +25706,8 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
-                                .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output</Value>
+                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                                .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -25788,10 +25749,10 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value> .bError 		:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Error;
-                               .bUnderrange :=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Underrange;
-                               .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
-                               .iRaw		:= TIID^Device 1 (EtherCAT)^Term 4 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value </Value>
+                <Value> .bError 		:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Error;
+                               .bUnderrange :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Underrange;
+                               .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
+                               .iRaw		:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value </Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -26095,11 +26056,11 @@ interlocking logic outside this function block.
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-02-20T09:42:27</Value>
+          <Value>2024-02-20T11:21:17</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>536576</Value>
+          <Value>532480</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
