@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2D055827-D5C4-3692-3BB5-1C0DEAD6E358}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{A8605532-FF36-271F-C600-6D794A41248F}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -4725,8 +4725,7 @@
         <BitSize>16</BitSize>
         <BitOffs>5464</BitOffs>
         <Default>
-          <String>
-          </String>
+          <String> </String>
         </Default>
       </SubItem>
       <SubItem>
@@ -4789,8 +4788,7 @@
         <BitSize>24</BitSize>
         <BitOffs>5632</BitOffs>
         <Default>
-          <String>
-          </String>
+          <String>	</String>
         </Default>
       </SubItem>
       <SubItem>
@@ -4800,7 +4798,7 @@
         <BitOffs>5656</BitOffs>
         <Default>
           <String>
-          </String>
+</String>
         </Default>
       </SubItem>
       <Method>
@@ -25501,8 +25499,8 @@ interlocking logic outside this function block.
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_03</Name>
-            <Comment> RIX RCC USES 
-{attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '} 
+            <Comment> RIX RCC USES
+{attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '}
 {attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
                              .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
                             .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
@@ -25886,7 +25884,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-02-26T13:05:25</Value>
+          <Value>2024-03-01T08:46:24</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
