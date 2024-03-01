@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
-	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="Sample_Delivery" PrjFilePath="..\..\Sample_Delivery\Sample_Delivery.plcproj" TmcFilePath="..\..\Sample_Delivery\Sample_Delivery.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Sample_Delivery\Sample_Delivery.tmc" TmcHash="{C4715E97-4825-C916-1BAC-52AA2F22B4E3}">
-			<Name>Sample_Delivery Instance</Name>
+	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="PLC_UED_SDS" PrjFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.plcproj" TmcFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Sample_Delivery\Sample_Delivery.tmc" TmcHash="{2D055827-D5C4-3692-3BB5-1C0DEAD6E358}">
+			<Name>PLC_UED_SDS Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
@@ -13,12 +13,9 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -128,7 +125,7 @@
 		</Instance>
 	</Project>
 	<Mappings>
-		<OwnerA Name="Sample_Delivery Instance">
+		<OwnerA Name="PLC_UED_SDS Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
@@ -137,12 +134,9 @@
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)">
 				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>

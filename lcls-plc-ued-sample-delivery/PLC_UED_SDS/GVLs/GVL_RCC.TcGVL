@@ -6,32 +6,33 @@
     {attribute 'pytmc' := 'pv: UED:RCC:VAC:OVRD_MODE'}
     xSystemOverrideMode_RCC	: BOOL := FALSE;
 
-    (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:01 '}
     {attribute 'TcLinkTo' := 	'.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output'}
     RCC_VRC_01 : FB_VRC_NC_ClsLS;
 
-    (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '}
-    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
-                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 2^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
-    RCC_VRC_02 : FB_VRC;
+    RCC_VRC_02 : FB_VRC_NC_ClsLS;
 
-    (* Roughing Manifold Valvese *)
+    // RIX RCC USES
+    //{attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '}
+    //{attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
+    //                             .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+    //                            .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
+    //RCC_VRC_02 : FB_VRC;
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:03 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
                                 .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output'}
     RCC_VRC_03 : FB_VRC_NC_ClsLS;
 
-    (* Roughing Manifold Valvese *)
 
     {attribute 'pytmc' :=' pv: UED:RCC:VRC:04 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
                                 .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output'}
     RCC_VRC_04 : FB_VRC_NC_ClsLS;
 

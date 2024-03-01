@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{C4715E97-4825-C916-1BAC-52AA2F22B4E3}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2D055827-D5C4-3692-3BB5-1C0DEAD6E358}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -4725,7 +4725,8 @@
         <BitSize>16</BitSize>
         <BitOffs>5464</BitOffs>
         <Default>
-          <String> </String>
+          <String>
+          </String>
         </Default>
       </SubItem>
       <SubItem>
@@ -4788,7 +4789,8 @@
         <BitSize>24</BitSize>
         <BitOffs>5632</BitOffs>
         <Default>
-          <String>	</String>
+          <String>
+          </String>
         </Default>
       </SubItem>
       <SubItem>
@@ -4798,7 +4800,7 @@
         <BitOffs>5656</BitOffs>
         <Default>
           <String>
-</String>
+          </String>
         </Default>
       </SubItem>
       <Method>
@@ -15957,207 +15959,6 @@ interlocking logic outside this function block.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_VRC</Name>
-      <Comment> This Function Block Implements Basic Functionality for certain types of valves e.g Turbo Isolation valves, Apperture Valve.
-This function block is interloked by an input (i_xExtILK_OK). This is so developers can interface with custom
-interlocking logic outside this function block.
- Note Interlock Logic is External </Comment>
-      <BitSize>84928</BitSize>
-      <ExtendsType Namespace="LCLS_Vacuum">FB_Valve</ExtendsType>
-      <SubItem>
-        <Name>i_xExtILK_OK</Name>
-        <Type>BOOL</Type>
-        <Comment>Connect to Interlock logic condition(e.g F_TURBO_VRC_ILK Function), otherwise, Set to True if the valve is not interlocked</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>82304</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>i_xOverrideMode</Name>
-        <Type>BOOL</Type>
-        <Comment>To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>82312</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>iq_stValve</Name>
-        <Type Namespace="LCLS_Vacuum">ST_VRC</Type>
-        <BitSize>816</BitSize>
-        <BitOffs>82320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-    pv:
-	</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sPath</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>83136</BitOffs>
-        <Properties>
-          <Property>
-            <Name>instance-path</Name>
-          </Property>
-          <Property>
-            <Name>noinit</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>xFirstPass</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>83784</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbFSInit</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>83808</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tonOvrd</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>83872</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tonDelOK</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>84096</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>rtOK</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>84320</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tOvrd</Name>
-        <Type>TIME</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>84384</BitOffs>
-        <Default>
-          <DateTime>T#10s</DateTime>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>tTimeOutDuration</Name>
-        <Type>TIME</Type>
-        <Comment> Timeouts</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>84416</BitOffs>
-        <Default>
-          <DateTime>T#30S</DateTime>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>tOPNtimeout</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>84448</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tCLStimeout</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>84672</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>i_xOpnLS</Name>
-        <Type>BOOL</Type>
-        <Comment>IO</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>84896</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>i_xClsLS</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>84904</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>q_xOPN_DO</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>84912</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Action>
-        <Name>ACT_Logger</Name>
-      </Action>
-      <Action>
-        <Name>ACT_IO</Name>
-      </Action>
-      <Method>
-        <Name>M_IsOpen</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-      </Method>
-      <Method>
-        <Name>M_IsClosed</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-      </Method>
-      <Method>
-        <Name>M_Set_OPN_SW</Name>
-        <Comment> Use this Methode to Open or close the valve by setting the OPN_SW to the input value.</Comment>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>value</Name>
-          <Type>BOOL</Type>
-          <BitSize>8</BitSize>
-        </Parameter>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>no_check</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name Namespace="Tc2_System">ADSWRITE</Name>
       <Comment> ADS write command. </Comment>
       <BitSize>1216</BitSize>
@@ -17629,7 +17430,7 @@ interlocking logic outside this function block.
   </DataTypes>
   <Modules>
     <Module GUID="{DFC43783-03DA-49F9-8D2E-D378A5BF5ECC}" TcSmClass="TComPlcObjDef" TargetPlatform="TwinCAT RT (x86)">
-      <Name>Sample_Delivery</Name>
+      <Name>PLC_UED_SDS</Name>
       <CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
       <Licenses/>
       <Contexts>
@@ -17663,8 +17464,9 @@ interlocking logic outside this function block.
             <BitOffs>633714784</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_02.i_xOpnLS</Name>
-            <Comment>IO</Comment>
+            <Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
+            <Comment>IO
+	i_xOpnLS	AT%I*: BOOL;</Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
@@ -17674,18 +17476,6 @@ interlocking logic outside this function block.
               </Property>
             </Properties>
             <BitOffs>633799712</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633799720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_03.i_xClsLS</Name>
@@ -17865,7 +17655,7 @@ interlocking logic outside this function block.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633799728</BitOffs>
+            <BitOffs>633799720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
@@ -24488,6 +24278,12 @@ interlocking logic outside this function block.
             <BitOffs>625199904</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>PRG_RCC.RCC_VRC_01_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>625199912</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_TcUnit.NumberOfInitializedTestSuites</Name>
             <Comment> The assert function block instance should be 1:1 mapped to
        the test suite instance path. </Comment>
@@ -24642,6 +24438,12 @@ interlocking logic outside this function block.
               </Property>
             </Properties>
             <BitOffs>633569136</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_02_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>633569176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.g_DummyVG</Name>
@@ -25356,6 +25158,18 @@ interlocking logic outside this function block.
             <BitOffs>633583072</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>PRG_RCC.RCC_VRC_03_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>633583088</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_04_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>633583096</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>PMPS_PARAM.MAX_ASSERTIONS</Name>
             <Comment>Maximum number of BP requests in the arbiter</Comment>
             <BitSize>32</BitSize>
@@ -25552,6 +25366,21 @@ interlocking logic outside this function block.
             <BitOffs>633591136</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT</Name>
+            <BitSize>32</BitSize>
+            <BaseType>REAL</BaseType>
+            <Default>
+              <Value>10</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: UED:GCP:01:INLK_Setpoint </Value>
+              </Property>
+            </Properties>
+            <BitOffs>633629280</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_RCC.xSystemOverrideMode_RCC</Name>
             <Comment> OverrideMode </Comment>
             <BitSize>8</BitSize>
@@ -25632,7 +25461,6 @@ interlocking logic outside this function block.
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_01</Name>
-            <Comment> Roughing Manifold Valvese </Comment>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25653,9 +25481,8 @@ interlocking logic outside this function block.
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_02</Name>
-            <Comment> Roughing Manifold Valvese </Comment>
             <BitSize>84928</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_VRC</BaseType>
+            <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -25663,8 +25490,7 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
-                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+                <Value>.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 2^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output</Value>
               </Property>
               <Property>
@@ -25675,7 +25501,12 @@ interlocking logic outside this function block.
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_03</Name>
-            <Comment> Roughing Manifold Valvese </Comment>
+            <Comment> RIX RCC USES 
+{attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '} 
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
+                             .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
+                            .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output'}
+RCC_VRC_02 : FB_VRC;</Comment>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25685,7 +25516,7 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
                                 .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output</Value>
               </Property>
               <Property>
@@ -25696,7 +25527,6 @@ interlocking logic outside this function block.
           </Symbol>
           <Symbol>
             <Name>GVL_RCC.RCC_VRC_04</Name>
-            <Comment> Roughing Manifold Valvese </Comment>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25706,7 +25536,7 @@ interlocking logic outside this function block.
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E3 (EL1004)^Channel 1^Input;
+                <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
                                 .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output</Value>
               </Property>
               <Property>
@@ -26056,11 +25886,11 @@ interlocking logic outside this function block.
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-02-20T11:21:17</Value>
+          <Value>2024-02-26T13:05:25</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>532480</Value>
+          <Value>536576</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
