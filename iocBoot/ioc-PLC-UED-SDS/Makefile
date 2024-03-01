@@ -22,4 +22,5 @@ PLC_HOSTNAME :=
 # leave this blank as it can be found in the project:
 PLC_AMS_NET_ID :=
 
+IOC_HOST_IP_REGEX := ^172.21.*$
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
