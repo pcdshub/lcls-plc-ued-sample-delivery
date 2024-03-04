@@ -6,7 +6,7 @@ PRODUCTION_IOC := 0
 
 PROJECT_NAME := lcls-plc-ued-sample-delivery
 PROJECT_PATH := ../../lcls-plc-ued-sample-delivery/lcls-plc-ued-sample-delivery.tsproj
-PLC := Sample_Delivery
+PLC := PLC_UED_SDS
 
 PYTMC_OPTS :=
 PREFIX := PLC:$(PLC)
@@ -22,4 +22,5 @@ PLC_HOSTNAME :=
 # leave this blank as it can be found in the project:
 PLC_AMS_NET_ID :=
 
+IOC_HOST_IP_REGEX := ^172.21.*$
 include $(IOC_TOP)/iocBoot/templates/Makefile.base

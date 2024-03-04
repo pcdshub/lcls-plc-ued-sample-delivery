@@ -1,30 +1,32 @@
-#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-ued-sample-delivery.tsproj
-#        PLC name: Sample_Delivery (Sample_Delivery Instance)
-# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
-# Project version: unknown
-#    Project hash: unknown
-#     PLC IP/host: 172.21.148.84
-#      PLC Net ID: 172.21.148.84.1.1
+#        PLC name: PLC_UED_SDS (PLC_UED_SDS Instance)
+# Generated using: pytmc 2.16.0
+# Project version: 41f1387
+#    Project hash: 41f1387bd365b8cf469106590513d0a3a7e4a907
+#     PLC IP/host: 172.21.36.53
+#      PLC Net ID: 172.21.36.53.1.1
 # ** DEVELOPMENT MODE IOC **
 # * Using IOC boot directory for autosave.
 # * Archiver settings will not be configured.
 #
 # Libraries:
 #
-#   Tc2_Standard: * (Beckhoff Automation GmbH)
-#   Tc2_System: * (Beckhoff Automation GmbH)
-#   Tc3_Module: * (Beckhoff Automation GmbH)
+#   LCLS General: * -> 2.10.0 (SLAC)
+#   LCLS Vacuum: * -> 2.3.3 (SLAC - LCLS)
+#   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
+#   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 #
 ################### AUTO-GENERATED DO NOT EDIT ###################
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "" )
-epicsEnvSet("LOCATION", "PLC:Sample_Delivery" )
+epicsEnvSet("ENGINEER", "jozamudi" )
+epicsEnvSet("LOCATION", "PLC:PLC_UED_SDS" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
 
@@ -33,17 +35,17 @@ dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
 adsIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
-epicsEnvSet("IPADDR",           "172.21.148.84")
-epicsEnvSet("AMSID",            "172.21.148.84.1.1")
+epicsEnvSet("IPADDR",           "172.21.36.53")
+epicsEnvSet("AMSID",            "172.21.36.53.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1000")
+epicsEnvSet("ADS_MAX_PARAMS",   "1217")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.148.84 ^172.*$")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.36.53 ^172.21.*")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -73,32 +75,37 @@ adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)
 cd "$(ADS_IOC_TOP)/db"
 
 
-dbLoadRecords("iocSoft.db", "IOC=PLC:Sample_Delivery")
-dbLoadRecords("save_restoreStatus.db", "P=PLC:Sample_Delivery:")
+dbLoadRecords("iocSoft.db", "IOC=PLC:PLC_UED_SDS")
+dbLoadRecords("save_restoreStatus.db", "P=PLC:PLC_UED_SDS:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:Sample_Delivery")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:PLC_UED_SDS,IDX=1")
+dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:PLC_UED_SDS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:Sample_Delivery,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.148.84")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:PLC_UED_SDS,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=41f1387,VERSION=41f1387,PYTMC=2.16.0,PLC_HOST=172.21.36.53")
 
-#   Tc2_Standard: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:Sample_Delivery,DEPENDENCY=Tc2_Standard,VERSION=*,VENDOR=Beckhoff Automation GmbH")
-#   Tc2_System: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:Sample_Delivery,DEPENDENCY=Tc2_System,VERSION=*,VENDOR=Beckhoff Automation GmbH")
-#   Tc3_Module: * (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:Sample_Delivery,DEPENDENCY=Tc3_Module,VERSION=*,VENDOR=Beckhoff Automation GmbH")
+#   LCLS General: * -> 2.10.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=LCLS_General,VERSION=2.10.0,VENDOR=SLAC")
+#   LCLS Vacuum: * -> 2.3.3 (SLAC - LCLS)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=LCLS_Vacuum,VERSION=2.3.3,VENDOR=SLAC - LCLS")
+#   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=Tc2_Standard,VERSION=3.3.3.0,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=Tc2_System,VERSION=3.4.26.0,VENDOR=Beckhoff Automation GmbH")
+#   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=Tc3_Module,VERSION=3.3.21.0,VENDOR=Beckhoff Automation GmbH")
 
 cd "$(IOC_TOP)"
 
 ## PLC Project Database files ##
-dbLoadRecords("Sample_Delivery.db", "PORT=$(ASYN_PORT),PREFIX=PLC:Sample_Delivery:,IOCNAME=$(IOC),IOC=$(IOC)")
+dbLoadRecords("PLC_UED_SDS.db", "PORT=$(ASYN_PORT),PREFIX=PLC:PLC_UED_SDS:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 0
-callbackSetQueueSize(2000)
+# Total records: 217
+callbackSetQueueSize(2434)
 
 # Autosave and archive settings:
-save_restoreSet_status_prefix("PLC:Sample_Delivery:")
+save_restoreSet_status_prefix("PLC:PLC_UED_SDS:")
 save_restoreSet_IncompleteSetsOk(1)
 save_restoreSet_DatedBackupFiles(1)
 set_pass0_restoreFile("info_positions.sav")
