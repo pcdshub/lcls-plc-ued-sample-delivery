@@ -6,7 +6,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[PRG_RCC();]]></ST>
+      <ST><![CDATA[PRG_RCC();
+SolenoidPairA();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

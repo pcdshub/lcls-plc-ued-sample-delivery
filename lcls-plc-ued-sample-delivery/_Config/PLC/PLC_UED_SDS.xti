@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
 	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="PLC_UED_SDS" PrjFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.plcproj" TmcFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Sample_Delivery\Sample_Delivery.tmc" TmcHash="{A8605532-FF36-271F-C600-6D794A41248F}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc" TmcHash="{F6477B3E-0C6A-30CD-B11B-78B53E2684C0}">
 			<Name>PLC_UED_SDS Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -68,6 +68,16 @@
 					<Name>GVL_RCC.RCC_STC_01.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.i_xEpics</Name>
+					<Comment><![CDATA[ open A when False, open B when True]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.i_xDebug</Name>
+					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
@@ -85,6 +95,14 @@
 				</Var>
 				<Var>
 					<Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.q_xDO1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.q_xDO2</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
