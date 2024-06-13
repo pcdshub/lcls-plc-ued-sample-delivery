@@ -70,6 +70,102 @@ record(longin, "$(PREFIX)LCLSGeneral:LogMessageCount_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "UED:SDS:SPR:A:Debug_RBV") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.i_xDebug")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.i_xDebug?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:SPR:A:Debug") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.i_xDebug")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.i_xDebug=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:SDS:SPR:A:Switch_RBV") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.i_xEpics")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.i_xEpics?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:SPR:A:Switch") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.i_xEpics")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.i_xEpics=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:SDS:SPR:A:Valve:01:Open_RBV") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO1")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.q_xDO1?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:SPR:A:Valve:01:Open") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO1")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.q_xDO1=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:SDS:SPR:A:Valve:02:Open_RBV") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO2")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.q_xDO2?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:SPR:A:Valve:02:Open") {
+  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO2")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.q_xDO2=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
 record(mbbi, "UED:RCC:GCP:01:STATE_RBV") {
   field(DESC, "GVL_RCC.RCC_GCP_01.PG.eState")
   field(SCAN, "I/O Intr")
