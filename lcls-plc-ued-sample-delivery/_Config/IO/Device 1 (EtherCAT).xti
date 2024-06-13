@@ -33,6 +33,14 @@
 		<Box File="Term 1 (EK1200).xti" Id="1">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<EtherCAT/>
+		<Box File="Solenoid Pair A (EP1111).xti" Id="9">
+			<EtherCAT PortABoxInfo="#xffffffff"/>
+		</Box>
+		<Box File="Solenoid Pair A Digital IO (EP2338-0001).xti" Id="8">
+			<EtherCAT PortABoxInfo="#x01000009"/>
+		</Box>
+		<EtherCAT>
+			<SyncUnit Name="[Solenoid Pair A (EP1111)]" HcName="Solenoid Pair A (EP1111)"/>
+		</EtherCAT>
 	</Device>
 </TcSmItem>
