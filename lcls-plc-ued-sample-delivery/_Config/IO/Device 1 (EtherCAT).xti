@@ -30,17 +30,20 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Box File="Term 1 (EK1200).xti" Id="1">
+		<Box File="Term 9 (EK1200).xti" Id="7">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<Box File="Solenoid Pair A (EP1111).xti" Id="9">
+		<Box File="Box 15 (EP9128-0021).xti" Id="15">
+			<EtherCAT PortABoxInfo="#x0100000e"/>
+		</Box>
+		<Box File="Box 18 (EP1111-0000).xti" Id="18">
 			<EtherCAT PortABoxInfo="#xffffffff"/>
 		</Box>
-		<Box File="Solenoid Pair A Digital IO (EP2338-0001).xti" Id="8">
-			<EtherCAT PortABoxInfo="#x01000009"/>
+		<Box File="Box 19 (EP2338-0001).xti" Id="19">
+			<EtherCAT PortABoxInfo="#x01000012"/>
 		</Box>
 		<EtherCAT>
-			<SyncUnit Name="[Solenoid Pair A (EP1111)]" HcName="Solenoid Pair A (EP1111)"/>
+			<SyncUnit Name="[Box 18 (EP1111-0000)]" HcName="Box 18 (EP1111-0000)"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>
