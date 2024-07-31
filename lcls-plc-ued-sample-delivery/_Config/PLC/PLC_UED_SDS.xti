@@ -1,11 +1,21 @@
 <?xml version="1.0"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.4" ClassName="CNestedPlcProjDef">
 	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="PLC_UED_SDS" PrjFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.plcproj" TmcFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc" TmcHash="{D7D9FC2E-3519-9F08-F96E-883E95E17471}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc">
 			<Name>PLC_UED_SDS Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.i_xEpics</Name>
+					<Comment><![CDATA[ open A when False, open B when True]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.i_xDebug</Name>
+					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>GVL_RCC.RCC_VRC_01.i_xClsLS</Name>
 					<Comment><![CDATA[IO
@@ -52,8 +62,16 @@
 					<Type>INT</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2" AreaNo="1">
+			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.q_xDO1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_MAIN.SolenoidPairA.q_xDO2</Name>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
@@ -71,7 +89,7 @@
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="8" AreaNo="4">
+			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
 				<Var>
 					<Name>PMPS_GVL.SuccessfulPreemption</Name>
@@ -91,17 +109,6 @@
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
-			<Contexts>
-				<Context>
-					<Id NeedCalleeCall="true">0</Id>
-					<Name>PlcTask</Name>
-					<ManualConfig>
-						<OTCID>#x02010030</OTCID>
-					</ManualConfig>
-					<Priority>20</Priority>
-					<CycleTime>10000000</CycleTime>
-				</Context>
-			</Contexts>
 			<TaskPouOids>
 				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
@@ -109,6 +116,10 @@
 	</Project>
 	<Mappings>
 		<OwnerA Name="PLC_UED_SDS Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)">
+				<Link VarA="PlcTask Outputs^GVL_MAIN.SolenoidPairA.q_xDO1" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_MAIN.SolenoidPairA.q_xDO2" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>

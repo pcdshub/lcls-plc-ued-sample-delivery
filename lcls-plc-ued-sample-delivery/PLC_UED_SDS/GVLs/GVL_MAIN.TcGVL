@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_MAIN" Id="{e66c2fe5-8e74-49a9-9562-60ceddf31bb1}">
+    <Declaration><![CDATA[VAR_GLOBAL
+{attribute 'pytmc' := 'pv: UED:SDS:SPR:A'}
+{attribute 'TcLinkTo' := 	'.q_xDO1 := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 9^Output;
+                          	.q_xDO2 := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 10^Output;	
+'}
+SolenoidPairA : FB_SolenoidPair;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

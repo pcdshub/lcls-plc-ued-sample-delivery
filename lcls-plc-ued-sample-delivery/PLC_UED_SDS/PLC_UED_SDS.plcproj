@@ -17,6 +17,10 @@
     <LibraryReferences>{9e656701-9d36-4c53-9918-dfc384e3f7e1}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GVLs\GVL_MAIN.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="GVLs\GVL_RCC.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -46,6 +50,10 @@
       <DefaultResolution>LCLS Vacuum, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>LCLS_Vacuum</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="lcls-twincat-sample-delivery">
+      <DefaultResolution>lcls-twincat-sample-delivery, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_sample_delivery</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
@@ -70,6 +78,9 @@
     </PlaceholderResolution>
     <PlaceholderResolution Include="LCLS Vacuum">
       <Resolution>LCLS Vacuum, 2.3.3 (SLAC - LCLS)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls-twincat-sample-delivery">
+      <Resolution>lcls-twincat-sample-delivery, 0.0.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="Tc2_Standard">
       <Resolution>Tc2_Standard, 3.3.3.0 (Beckhoff Automation GmbH)</Resolution>
