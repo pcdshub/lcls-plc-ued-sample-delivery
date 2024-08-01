@@ -70,6 +70,54 @@ record(longin, "$(PREFIX)LCLSGeneral:LogMessageCount_RBV") {
   info(archive, "VAL")
 }
 
+record(bi, "UED:SDS:PURGE:A_RBV") {
+  field(DESC, "GVL_MAIN.PURGE_VRC_01_CTL")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.PURGE_VRC_01_CTL?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:PURGE:A") {
+  field(DESC, "GVL_MAIN.PURGE_VRC_01_CTL")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.PURGE_VRC_01_CTL=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:SDS:PURGE:B_RBV") {
+  field(DESC, "GVL_MAIN.PURGE_VRC_02_CTL")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.PURGE_VRC_02_CTL?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:SDS:PURGE:B") {
+  field(DESC, "GVL_MAIN.PURGE_VRC_02_CTL")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.PURGE_VRC_02_CTL=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
 record(bi, "UED:SDS:SPR:A:Debug_RBV") {
   field(DESC, "GVL_MAIN.SolenoidPairA.i_xDebug")
   field(SCAN, "I/O Intr")
@@ -163,6 +211,138 @@ record(bo, "UED:SDS:SPR:A:Valve:02:Open") {
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(longin, "UED:SDS:VICI:01:iReqPos_RBV") {
+  field(DESC, "GVL_MAIN.fbValve.iReqPos")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.iReqPos?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longout, "UED:SDS:VICI:01:iReqPos") {
+  field(DESC, "GVL_MAIN.fbValve.iReqPos")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.iReqPos=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:01_RBV") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s1")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s1?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:01") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s1")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s1=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:02_RBV") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s2")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s2?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:02") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s2")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s2=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:03_RBV") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s3")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s3?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:03") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s3")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s3=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:04_RBV") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s4")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s4?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:SDS:VICI:01:SampleNames:04") {
+  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s4")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s4=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
   info(archive, "VAL")
 }
 

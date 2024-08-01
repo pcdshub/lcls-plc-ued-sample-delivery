@@ -4,6 +4,10 @@ $(PREFIX)LCLSGeneral:LogHost.VAL	1	scan
 $(PREFIX)LCLSGeneral:LogPort_RBV.VAL	1	scan
 $(PREFIX)LCLSGeneral:LogPort.VAL	1	scan
 $(PREFIX)LCLSGeneral:LogMessageCount_RBV.VAL	1	scan
+UED:SDS:PURGE:A_RBV.VAL	1	scan
+UED:SDS:PURGE:A.VAL	1	scan
+UED:SDS:PURGE:B_RBV.VAL	1	scan
+UED:SDS:PURGE:B.VAL	1	scan
 UED:SDS:SPR:A:Debug_RBV.VAL	1	scan
 UED:SDS:SPR:A:Debug.VAL	1	scan
 UED:SDS:SPR:A:Switch_RBV.VAL	1	scan
@@ -12,6 +16,16 @@ UED:SDS:SPR:A:Valve:01:Open_RBV.VAL	1	scan
 UED:SDS:SPR:A:Valve:01:Open.VAL	1	scan
 UED:SDS:SPR:A:Valve:02:Open_RBV.VAL	1	scan
 UED:SDS:SPR:A:Valve:02:Open.VAL	1	scan
+UED:SDS:VICI:01:iReqPos_RBV.VAL	1	scan
+UED:SDS:VICI:01:iReqPos.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:01_RBV.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:01.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:02_RBV.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:02.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:03_RBV.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:03.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:04_RBV.VAL	1	scan
+UED:SDS:VICI:01:SampleNames:04.VAL	1	scan
 UED:RCC:GCP:01:STATE_RBV.VAL	1	scan
 UED:RCC:GCP:01:AutoOn_timer_RBV.VAL	1	scan
 UED:RCC:GCP:01:PRESS_AI_RBV.VAL	1	scan

@@ -4,8 +4,8 @@
 #         Project: lcls-plc-ued-sample-delivery.tsproj
 #        PLC name: PLC_UED_SDS (PLC_UED_SDS Instance)
 # Generated using: pytmc 2.16.0
-# Project version: 798f209
-#    Project hash: 798f2090f90b408f2a26220aaf617aec6d5a5401
+# Project version: bcd2ab1
+#    Project hash: bcd2ab1e458b07b84964bd424d58c7360c84b751
 #     PLC IP/host: 172.21.36.53
 #      PLC Net ID: 172.21.36.53.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -16,7 +16,7 @@
 #
 #   LCLS General: * -> 2.10.0 (SLAC)
 #   LCLS Vacuum: * -> 2.3.3 (SLAC - LCLS)
-#   lcls-twincat-sample-delivery: * -> 0.0.1 (SLAC)
+#   lcls-twincat-sample-delivery: * -> 1.0.0 (SLAC)
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
 #   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
 #   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
@@ -39,7 +39,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.36.53")
 epicsEnvSet("AMSID",            "172.21.36.53.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1225")
+epicsEnvSet("ADS_MAX_PARAMS",   "1239")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -84,14 +84,14 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:PLC_UED_SDS,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:PLC_UED_SDS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:PLC_UED_SDS,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=798f209,VERSION=798f209,PYTMC=2.16.0,PLC_HOST=172.21.36.53")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:PLC_UED_SDS,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=bcd2ab1,VERSION=bcd2ab1,PYTMC=2.16.0,PLC_HOST=172.21.36.53")
 
 #   LCLS General: * -> 2.10.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=LCLS_General,VERSION=2.10.0,VENDOR=SLAC")
 #   LCLS Vacuum: * -> 2.3.3 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=LCLS_Vacuum,VERSION=2.3.3,VENDOR=SLAC - LCLS")
-#   lcls-twincat-sample-delivery: * -> 0.0.1 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=lcls-twincat-sample-delivery,VERSION=0.0.1,VENDOR=SLAC")
+#   lcls-twincat-sample-delivery: * -> 1.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=lcls-twincat-sample-delivery,VERSION=1.0.0,VENDOR=SLAC")
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=Tc2_Standard,VERSION=3.3.3.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
@@ -104,8 +104,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("PLC_UED_SDS.db", "PORT=$(ASYN_PORT),PREFIX=PLC:PLC_UED_SDS:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 225
-callbackSetQueueSize(2450)
+# Total records: 239
+callbackSetQueueSize(2478)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:PLC_UED_SDS:")
