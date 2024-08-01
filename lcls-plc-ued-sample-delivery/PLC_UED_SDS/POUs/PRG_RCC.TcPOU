@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_RCC" Id="{522e97e2-9912-4572-a783-5cd8dcae93c6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RCC
 VAR
@@ -14,7 +14,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[RCC_GCP_01(PG=>);
+      <ST><![CDATA[RCC_GCP_01.M_SetBits(30518);
+RCC_GCP_01(PG=>);
 RCC_STC_01();
 
 (* Valve can open only when UED-RCC-VRC-02 and 03 are closed*)
