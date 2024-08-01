@@ -17,10 +17,10 @@
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 12^Output'}
     PURGE_VRC_02_CTL AT%I* : BOOL;
 	
-	// 4 Port Vici Vavle
+	// 4 Port Vici Vavle 
 	{attribute 'pytmc' := 'pv: UED:SDS:VICI:01'}
-	{attribute 'TcLinkTo' := '.stViciSerial.stComIn.Status := TIIB[VICI_VALVE Serial IO(EP6002-0002)]^COM TxPDO-Map Inputs Channel 2^Status;
-                          	  .stViciSerial.stComOut.Ctrl := TIIB[VICI_VALVE Serial IO(EP6002-0002)]^COM RxPDO-Map Outputs Channel 2^Ctrl;
+	{attribute 'TcLinkTo' := '.stViciSerial.stComIn.Status := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)^COM TxPDO-Map Inputs Channel 1^Status;
+                          	  .stViciSerial.stComOut.Ctrl := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)^COM RxPDO-Map Outputs Channel 1^Ctrl;
 	'}
 	fbValve : FB_4PortViciValve;
 	
