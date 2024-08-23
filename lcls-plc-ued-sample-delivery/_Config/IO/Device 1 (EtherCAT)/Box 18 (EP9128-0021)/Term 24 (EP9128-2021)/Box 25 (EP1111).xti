@@ -6,7 +6,7 @@
 	<Box Id="25" BoxType="9099" BoxFlags="#x00000020">
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
-		<EtherCAT SlaveType="2" PdiType="#x0205" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x04574052" RevisionNo="#x00150000" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP1111-0000 ID-Switch" Desc="EP1111">
+		<EtherCAT SlaveType="2" PdiType="#x0205" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x04574052" RevisionNo="#x00150000" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="17" IdentificationAdo="308" IdentificationValue="310" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP1111-0000 ID-Switch" Desc="EP1111">
 			<SyncMan>001180002600010001000000800080008000001126010000</SyncMan>
 			<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 			<SyncMan>101000000400000003000000000000000000101004000000</SyncMan>
