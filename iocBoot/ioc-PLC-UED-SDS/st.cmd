@@ -4,8 +4,8 @@
 #         Project: lcls-plc-ued-sample-delivery.tsproj
 #        PLC name: PLC_UED_SDS (PLC_UED_SDS Instance)
 # Generated using: pytmc 2.16.0
-# Project version: bcd2ab1
-#    Project hash: bcd2ab1e458b07b84964bd424d58c7360c84b751
+# Project version: 5898aad
+#    Project hash: 5898aadf9d6c085448fdcb2033bc0654208b70b3
 #     PLC IP/host: 172.21.36.53
 #      PLC Net ID: 172.21.36.53.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -84,7 +84,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:PLC_UED_SDS,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:PLC_UED_SDS")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:PLC_UED_SDS,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=bcd2ab1,VERSION=bcd2ab1,PYTMC=2.16.0,PLC_HOST=172.21.36.53")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:PLC_UED_SDS,PROJECT=lcls-plc-ued-sample-delivery.tsproj,HASH=5898aad,VERSION=5898aad,PYTMC=2.16.0,PLC_HOST=172.21.36.53")
 
 #   LCLS General: * -> 2.10.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:PLC_UED_SDS,DEPENDENCY=LCLS_General,VERSION=2.10.0,VENDOR=SLAC")

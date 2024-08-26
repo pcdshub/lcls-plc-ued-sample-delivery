@@ -71,12 +71,12 @@ record(longin, "$(PREFIX)LCLSGeneral:LogMessageCount_RBV") {
 }
 
 record(bi, "UED:SDS:PURGE:A_RBV") {
-  field(DESC, "GVL_MAIN.PURGE_VRC_01_CTL")
+  field(DESC, "MAIN.PURGE_VRC_01_CTL")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.PURGE_VRC_01_CTL?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.PURGE_VRC_01_CTL?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -84,10 +84,10 @@ record(bi, "UED:SDS:PURGE:A_RBV") {
 }
 
 record(bo, "UED:SDS:PURGE:A") {
-  field(DESC, "GVL_MAIN.PURGE_VRC_01_CTL")
+  field(DESC, "MAIN.PURGE_VRC_01_CTL")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.PURGE_VRC_01_CTL=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.PURGE_VRC_01_CTL=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -95,12 +95,12 @@ record(bo, "UED:SDS:PURGE:A") {
 }
 
 record(bi, "UED:SDS:PURGE:B_RBV") {
-  field(DESC, "GVL_MAIN.PURGE_VRC_02_CTL")
+  field(DESC, "MAIN.PURGE_VRC_02_CTL")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.PURGE_VRC_02_CTL?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.PURGE_VRC_02_CTL?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -108,10 +108,10 @@ record(bi, "UED:SDS:PURGE:B_RBV") {
 }
 
 record(bo, "UED:SDS:PURGE:B") {
-  field(DESC, "GVL_MAIN.PURGE_VRC_02_CTL")
+  field(DESC, "MAIN.PURGE_VRC_02_CTL")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.PURGE_VRC_02_CTL=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.PURGE_VRC_02_CTL=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -119,12 +119,12 @@ record(bo, "UED:SDS:PURGE:B") {
 }
 
 record(bi, "UED:SDS:SPR:A:Debug_RBV") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.i_xDebug")
+  field(DESC, "MAIN.SolenoidPairA.i_xDebug")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.i_xDebug?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.SolenoidPairA.i_xDebug?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -132,10 +132,10 @@ record(bi, "UED:SDS:SPR:A:Debug_RBV") {
 }
 
 record(bo, "UED:SDS:SPR:A:Debug") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.i_xDebug")
+  field(DESC, "MAIN.SolenoidPairA.i_xDebug")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.i_xDebug=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.SolenoidPairA.i_xDebug=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -143,12 +143,12 @@ record(bo, "UED:SDS:SPR:A:Debug") {
 }
 
 record(bi, "UED:SDS:SPR:A:Switch_RBV") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.i_xEpics")
+  field(DESC, "MAIN.SolenoidPairA.i_xEpics")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.i_xEpics?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.SolenoidPairA.i_xEpics?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -156,10 +156,10 @@ record(bi, "UED:SDS:SPR:A:Switch_RBV") {
 }
 
 record(bo, "UED:SDS:SPR:A:Switch") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.i_xEpics")
+  field(DESC, "MAIN.SolenoidPairA.i_xEpics")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.i_xEpics=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.SolenoidPairA.i_xEpics=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -167,12 +167,12 @@ record(bo, "UED:SDS:SPR:A:Switch") {
 }
 
 record(bi, "UED:SDS:SPR:A:Valve:01:Open_RBV") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO1")
+  field(DESC, "MAIN.SolenoidPairA.q_xDO1")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.q_xDO1?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.SolenoidPairA.q_xDO1?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -180,10 +180,10 @@ record(bi, "UED:SDS:SPR:A:Valve:01:Open_RBV") {
 }
 
 record(bo, "UED:SDS:SPR:A:Valve:01:Open") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO1")
+  field(DESC, "MAIN.SolenoidPairA.q_xDO1")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.q_xDO1=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.SolenoidPairA.q_xDO1=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -191,12 +191,12 @@ record(bo, "UED:SDS:SPR:A:Valve:01:Open") {
 }
 
 record(bi, "UED:SDS:SPR:A:Valve:02:Open_RBV") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO2")
+  field(DESC, "MAIN.SolenoidPairA.q_xDO2")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.SolenoidPairA.q_xDO2?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.SolenoidPairA.q_xDO2?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -204,10 +204,10 @@ record(bi, "UED:SDS:SPR:A:Valve:02:Open_RBV") {
 }
 
 record(bo, "UED:SDS:SPR:A:Valve:02:Open") {
-  field(DESC, "GVL_MAIN.SolenoidPairA.q_xDO2")
+  field(DESC, "MAIN.SolenoidPairA.q_xDO2")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.SolenoidPairA.q_xDO2=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.SolenoidPairA.q_xDO2=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
@@ -215,32 +215,32 @@ record(bo, "UED:SDS:SPR:A:Valve:02:Open") {
 }
 
 record(longin, "UED:SDS:VICI:01:iReqPos_RBV") {
-  field(DESC, "GVL_MAIN.fbValve.iReqPos")
+  field(DESC, "MAIN.fbValve.iReqPos")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.iReqPos?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbValve.iReqPos?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
 }
 
 record(longout, "UED:SDS:VICI:01:iReqPos") {
-  field(DESC, "GVL_MAIN.fbValve.iReqPos")
+  field(DESC, "MAIN.fbValve.iReqPos")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.iReqPos=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbValve.iReqPos=")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
   info(archive, "VAL")
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:01_RBV") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s1")
+  field(DESC, "MAIN.fbValve.stSampleNames.s1")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s1?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbValve.stSampleNames.s1?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -250,10 +250,10 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:01_RBV") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:01") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s1")
+  field(DESC, "MAIN.fbValve.stSampleNames.s1")
   field(DTYP, "asynInt8ArrayOut")
   field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s1=")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbValve.stSampleNames.s1=")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -263,12 +263,12 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:01") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:02_RBV") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s2")
+  field(DESC, "MAIN.fbValve.stSampleNames.s2")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s2?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbValve.stSampleNames.s2?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -278,10 +278,10 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:02_RBV") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:02") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s2")
+  field(DESC, "MAIN.fbValve.stSampleNames.s2")
   field(DTYP, "asynInt8ArrayOut")
   field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s2=")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbValve.stSampleNames.s2=")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -291,12 +291,12 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:02") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:03_RBV") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s3")
+  field(DESC, "MAIN.fbValve.stSampleNames.s3")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s3?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbValve.stSampleNames.s3?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -306,10 +306,10 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:03_RBV") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:03") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s3")
+  field(DESC, "MAIN.fbValve.stSampleNames.s3")
   field(DTYP, "asynInt8ArrayOut")
   field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s3=")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbValve.stSampleNames.s3=")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -319,12 +319,12 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:03") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:04_RBV") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s4")
+  field(DESC, "MAIN.fbValve.stSampleNames.s4")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_MAIN.fbValve.stSampleNames.s4?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/MAIN.fbValve.stSampleNames.s4?")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
@@ -334,1625 +334,15 @@ record(waveform, "UED:SDS:VICI:01:SampleNames:04_RBV") {
 }
 
 record(waveform, "UED:SDS:VICI:01:SampleNames:04") {
-  field(DESC, "GVL_MAIN.fbValve.stSampleNames.s4")
+  field(DESC, "MAIN.fbValve.stSampleNames.s4")
   field(DTYP, "asynInt8ArrayOut")
   field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_MAIN.fbValve.stSampleNames.s4=")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/MAIN.fbValve.stSampleNames.s4=")
   field(FTVL, "CHAR")
   field(NELM, "80")
   field(MPST, "On Change")
   field(APST, "On Change")
   info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:GCP:01:STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(ZRST, "Off")
-  field(ONST, "GaugeDisconnected")
-  field(TWST, "OoR")
-  field(THST, "PressInvalid")
-  field(FRST, "Starting")
-  field(FVST, "Valid")
-  field(SXST, "ValidHi")
-  field(SVST, "ValidLo")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(longin, "UED:RCC:GCP:01:AutoOn_timer_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.iAutoOnTimer")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.iAutoOnTimer?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(longin, "UED:RCC:GCP:01:PRESS_AI_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.i_iPRESS_R")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.i_iPRESS_R?")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:DISC_ACTIVE_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.i_xDisc_Active")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.i_xDisc_Active?")
-  field(ZNAM, "NO DISC")
-  field(ONAM, "DISC ACTIVE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:HV_ON_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.i_xHV_ON")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.i_xHV_ON?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:HV_DIS_DO_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.q_xHV_DIS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.q_xHV_DIS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(ai, "UED:RCC:GCP:01:SP_HYS_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rHYS_PR")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.rHYS_PR?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ao, "UED:RCC:GCP:01:SP_HYS") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rHYS_PR")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.rHYS_PR=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "UED:RCC:GCP:01:PRESS_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rPRESS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.rPRESS?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ai, "UED:RCC:GCP:01:PRO_SP_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rPRO_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.rPRO_SP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ao, "UED:RCC:GCP:01:PRO_SP") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rPRO_SP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.rPRO_SP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "UED:RCC:GCP:01:VAC_SP_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rVAC_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.rVAC_SP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(ao, "UED:RCC:GCP:01:VAC_SP") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.rVAC_SP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.rVAC_SP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:AT_VAC_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xAT_VAC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xAT_VAC?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:Auto_On_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xAutoOn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xAutoOn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:GCP:01:Auto_On") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xAutoOn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.xAutoOn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:HV_SW_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xHV_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xHV_SW?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:GCP:01:HV_SW") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xHV_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.xHV_SW=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:ILK_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xILKOk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xILKOk?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:LOGGER_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:GCP:01:LOGGER") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_GCP_01.PG.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:GCP:01:PRESS_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_GCP_01.PG.xPRESS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_GCP_01.PG.xPRESS_OK?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:TC:01:CONN_RBV") {
-  field(DESC, "GVL_RCC.RCC_STC_01.bConnected")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_STC_01.bConnected?")
-  field(ZNAM, "Disconnected")
-  field(ONAM, "Connected")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:TC:01:ERR_RBV") {
-  field(DESC, "GVL_RCC.RCC_STC_01.bError")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_STC_01.bError?")
-  field(ZNAM, "False")
-  field(ONAM, "True")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(ai, "UED:RCC:TC:01:TEMP_RBV") {
-  field(DESC, "GVL_RCC.RCC_STC_01.fTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_STC_01.fTemp?")
-  field(PREC, "2")
-  field(EGU, "C")
-  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:ERROR_RBV") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:ERROR") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:01:POS_STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:01:STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:CLS_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:OPN_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:ALM_RST_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:ALM_RST") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:OPN_SW_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:OPN_SW") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:FORCE_OPN_RBV") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:FORCE_OPN") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:OPN_DO_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:01:ErrMsg_RBV") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:01:ErrMsg") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:CLS_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:EXT_ILK_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:LOGGER_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:LOGGER") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:OPN_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_01.iq_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:01:OVRD_ON_RBV") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_01.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:01:OVRD_ON") {
-  # GVL_RCC.RCC_VRC_01.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_01.i...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_01.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:ERROR_RBV") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:ERROR") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:02:POS_STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:02:STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:CLS_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:OPN_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:ALM_RST_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:ALM_RST") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:OPN_SW_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:OPN_SW") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:FORCE_OPN_RBV") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:FORCE_OPN") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:OPN_DO_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:02:ErrMsg_RBV") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:02:ErrMsg") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:CLS_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:EXT_ILK_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:LOGGER_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:LOGGER") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:OPN_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_02.iq_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:02:OVRD_ON_RBV") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_02.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:02:OVRD_ON") {
-  # GVL_RCC.RCC_VRC_02.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_02.i...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_02.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:ERROR_RBV") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:ERROR") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:03:POS_STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:03:STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:CLS_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:OPN_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:ALM_RST_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:ALM_RST") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:OPN_SW_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:OPN_SW") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:FORCE_OPN_RBV") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:FORCE_OPN") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:OPN_DO_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:03:ErrMsg_RBV") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:03:ErrMsg") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:CLS_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:EXT_ILK_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:LOGGER_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:LOGGER") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:OPN_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_03.iq_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:03:OVRD_ON_RBV") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_03.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:03:OVRD_ON") {
-  # GVL_RCC.RCC_VRC_03.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_03.i...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_03.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:ERROR_RBV") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:ERROR") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.bErrorPresent
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:04:POS_STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "UED:RCC:VRC:04:STATE_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:CLS_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:OPN_DI_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:ALM_RST_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:ALM_RST") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:OPN_SW_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:OPN_SW") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:FORCE_OPN_RBV") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:FORCE_OPN") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:OPN_DO_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:04:ErrMsg_RBV") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "UED:RCC:VRC:04:ErrMsg") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.sErrorMessage
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:CLS_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:EXT_ILK_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:LOGGER_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:LOGGER") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:OPN_OK_RBV") {
-  field(DESC, "GVL_RCC.RCC_VRC_04.iq_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VRC:04:OVRD_ON_RBV") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.RCC_VRC_04.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VRC:04:OVRD_ON") {
-  # GVL_RCC.RCC_VRC_04.iq_stValve.xOverrideMode
-  field(DESC, "GVL_RCC.RCC_VRC_04.i...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.RCC_VRC_04.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "UED:RCC:VAC:OVRD_MODE_RBV") {
-  field(DESC, "GVL_RCC.xSystemOverrideMode_RCC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_RCC.xSystemOverrideMode_RCC?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "UED:RCC:VAC:OVRD_MODE") {
-  field(DESC, "GVL_RCC.xSystemOverrideMode_RCC")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_RCC.xSystemOverrideMode_RCC=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
@@ -3190,6 +1580,313 @@ record(bi, "$(PREFIX)RequestedBP:Valid_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
+record(mbbi, "UED:RCC:GCP:01:STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(ZRST, "Off")
+  field(ONST, "GaugeDisconnected")
+  field(TWST, "OoR")
+  field(THST, "PressInvalid")
+  field(FRST, "Starting")
+  field(FVST, "Valid")
+  field(SXST, "ValidHi")
+  field(SVST, "ValidLo")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(longin, "UED:RCC:GCP:01:AutoOn_timer_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.iAutoOnTimer")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.iAutoOnTimer?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(longin, "UED:RCC:GCP:01:PRESS_AI_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.i_iPRESS_R")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.i_iPRESS_R?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:DISC_ACTIVE_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.i_xDisc_Active")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.i_xDisc_Active?")
+  field(ZNAM, "NO DISC")
+  field(ONAM, "DISC ACTIVE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:HV_ON_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.i_xHV_ON")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.i_xHV_ON?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:HV_DIS_DO_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.q_xHV_DIS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.q_xHV_DIS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(ai, "UED:RCC:GCP:01:SP_HYS_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rHYS_PR")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.rHYS_PR?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ao, "UED:RCC:GCP:01:SP_HYS") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rHYS_PR")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.rHYS_PR=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "UED:RCC:GCP:01:PRESS_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.rPRESS?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ai, "UED:RCC:GCP:01:PRO_SP_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rPRO_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.rPRO_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ao, "UED:RCC:GCP:01:PRO_SP") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rPRO_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.rPRO_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "UED:RCC:GCP:01:VAC_SP_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rVAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.rVAC_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ao, "UED:RCC:GCP:01:VAC_SP") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.rVAC_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.rVAC_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:AT_VAC_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xAT_VAC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:Auto_On_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xAutoOn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xAutoOn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:GCP:01:Auto_On") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xAutoOn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.xAutoOn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:HV_SW_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xHV_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xHV_SW?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:GCP:01:HV_SW") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xHV_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.xHV_SW=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:ILK_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xILKOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xILKOk?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:LOGGER_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:GCP:01:LOGGER") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01.PG.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:GCP:01:PRESS_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01.PG.xPRESS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01.PG.xPRESS_OK?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
 record(ai, "UED:GCP:01:INLK_Setpoint_RBV") {
   field(DESC, "PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT")
   field(SCAN, "I/O Intr")
@@ -3209,5 +1906,1308 @@ record(ao, "UED:GCP:01:INLK_Setpoint") {
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT=")
   field(PREC, "3")
   info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:TC:01:CONN_RBV") {
+  field(DESC, "PRG_RCC.RCC_STC_01.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_STC_01.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:TC:01:ERR_RBV") {
+  field(DESC, "PRG_RCC.RCC_STC_01.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_STC_01.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(ai, "UED:RCC:TC:01:TEMP_RBV") {
+  field(DESC, "PRG_RCC.RCC_STC_01.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_STC_01.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:ERROR_RBV") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:ERROR") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:01:POS_STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:01:STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:CLS_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:OPN_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:ALM_RST_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:ALM_RST") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:OPN_SW_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:OPN_SW") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:FORCE_OPN_RBV") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:FORCE_OPN") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:OPN_DO_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:01:ErrMsg_RBV") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:01:ErrMsg") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:CLS_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:EXT_ILK_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:LOGGER_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:LOGGER") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:OPN_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_01.iq_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:01:OVRD_ON_RBV") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_01.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:01:OVRD_ON") {
+  # PRG_RCC.RCC_VRC_01.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_01.i...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_01.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:ERROR_RBV") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:ERROR") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:02:POS_STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:02:STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:CLS_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:OPN_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:ALM_RST_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:ALM_RST") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:OPN_SW_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:OPN_SW") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:FORCE_OPN_RBV") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:FORCE_OPN") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:OPN_DO_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:02:ErrMsg_RBV") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:02:ErrMsg") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:CLS_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:EXT_ILK_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:LOGGER_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:LOGGER") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:OPN_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_02.iq_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:02:OVRD_ON_RBV") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_02.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:02:OVRD_ON") {
+  # PRG_RCC.RCC_VRC_02.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_02.i...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_02.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:ERROR_RBV") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:ERROR") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:03:POS_STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:03:STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:CLS_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:OPN_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:ALM_RST_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:ALM_RST") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:OPN_SW_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:OPN_SW") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:FORCE_OPN_RBV") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:FORCE_OPN") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:OPN_DO_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:03:ErrMsg_RBV") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:03:ErrMsg") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:CLS_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:EXT_ILK_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:LOGGER_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:LOGGER") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:OPN_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_03.iq_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:03:OVRD_ON_RBV") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_03.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:03:OVRD_ON") {
+  # PRG_RCC.RCC_VRC_03.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_03.i...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_03.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:ERROR_RBV") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:ERROR") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.bErrorPresent
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:04:POS_STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "UED:RCC:VRC:04:STATE_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:CLS_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:OPN_DI_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:ALM_RST_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:ALM_RST") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:OPN_SW_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:OPN_SW") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:FORCE_OPN_RBV") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:FORCE_OPN") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:OPN_DO_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:04:ErrMsg_RBV") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "UED:RCC:VRC:04:ErrMsg") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.sErrorMessage
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:CLS_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:EXT_ILK_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:LOGGER_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:LOGGER") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:OPN_OK_RBV") {
+  field(DESC, "PRG_RCC.RCC_VRC_04.iq_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VRC:04:OVRD_ON_RBV") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_VRC_04.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VRC:04:OVRD_ON") {
+  # PRG_RCC.RCC_VRC_04.iq_stValve.xOverrideMode
+  field(DESC, "PRG_RCC.RCC_VRC_04.i...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_VRC_04.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "UED:RCC:VAC:OVRD_MODE_RBV") {
+  field(DESC, "PRG_RCC.xSystemOverrideMode_RCC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.xSystemOverrideMode_RCC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "UED:RCC:VAC:OVRD_MODE") {
+  field(DESC, "PRG_RCC.xSystemOverrideMode_RCC")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.xSystemOverrideMode_RCC=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
