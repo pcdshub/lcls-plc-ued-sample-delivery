@@ -53,7 +53,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="PLC_UED_SDS" PrjFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.plcproj" TmcFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc" TmcHash="{259EF120-69DB-8691-5B41-5FBE18F9B798}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc" TmcHash="{9808E937-4EC4-3558-4D88-98DDF38EAB79}">
 			<Name>PLC_UED_SDS Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -63,59 +63,59 @@
 					<Type GUID="{99A5CC11-3AD3-404B-9FF8-53771D83A09B}" Namespace="LCLS_General.Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.i_xClsLS</Name>
-					<Comment><![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
-					<Comment><![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.i_xClsLS</Name>
-					<Comment><![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.i_xClsLS</Name>
-					<Comment><![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.i_iPRESS_R</Name>
-					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_STC_01.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_MAIN.SolenoidPairA.i_xEpics</Name>
+					<Name>MAIN.SolenoidPairA.i_xEpics</Name>
 					<Comment><![CDATA[ open A when False, open B when True]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_MAIN.SolenoidPairA.i_xDebug</Name>
+					<Name>MAIN.SolenoidPairA.i_xDebug</Name>
 					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_01.i_xClsLS</Name>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_02.i_xClsLS</Name>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_03.i_xClsLS</Name>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_04.i_xClsLS</Name>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_GCP_01.i_iPRESS_R</Name>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_STC_01.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_STC_01.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_STC_01.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_STC_01.iRaw</Name>
+					<Type>INT</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2" AreaNo="1">
@@ -125,36 +125,36 @@
 					<Type GUID="{89D30126-148D-4774-924F-DAB8A1D8BC13}" Namespace="LCLS_General.Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
-					<Name>GVL_MAIN.PURGE_VRC_01_CTL</Name>
+					<Name>MAIN.SolenoidPairA.q_xDO1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.SolenoidPairA.q_xDO2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.PURGE_VRC_01_CTL</Name>
 					<Comment><![CDATA[ Purge Valves]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_MAIN.PURGE_VRC_02_CTL</Name>
+					<Name>MAIN.PURGE_VRC_02_CTL</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
+					<Name>PRG_RCC.RCC_VRC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+					<Name>PRG_RCC.RCC_VRC_02.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+					<Name>PRG_RCC.RCC_VRC_03.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_MAIN.SolenoidPairA.q_xDO1</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_MAIN.SolenoidPairA.q_xDO2</Name>
+					<Name>PRG_RCC.RCC_VRC_04.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -288,6 +288,32 @@
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2024-08-26T15:06:07">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)">
+						<Link VarA="GVL_RCC.RCC_VRC_02.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" IdB="-14" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_03.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" IdB="-15" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_04.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^Input" IdB="-16" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)">
+						<Link VarA="GVL_RCC.RCC_STC_01.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Overrange" IdB="74" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_STC_01.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Underrange" IdB="73" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_STC_01.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 1^Value" IdB="-24" AutoLink="true" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)">
+						<Link VarA="GVL_MAIN.PURGE_VRC_01_CTL" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.PURGE_VRC_02_CTL" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 12^Output" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.SolenoidPairA.q_xDO2" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 10^Output" IdB="-56" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
+						<Link VarA="GVL_RCC.RCC_VRC_02.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Output" IdB="-9" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_03.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Output" IdB="-10" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_04.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^Output" IdB="-11" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<Contexts>
 				<Context>
 					<Id NeedCalleeCall="true">0</Id>
@@ -307,10 +333,8 @@
 	<Mappings>
 		<OwnerA Name="PLC_UED_SDS Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)">
-				<Link VarA="PlcTask Outputs^GVL_MAIN.PURGE_VRC_01_CTL" VarB="Channel 11^Output" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_MAIN.PURGE_VRC_02_CTL" VarB="Channel 12^Output" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_MAIN.SolenoidPairA.q_xDO1" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_MAIN.SolenoidPairA.q_xDO2" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.SolenoidPairA.q_xDO1" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.SolenoidPairA.q_xDO2" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
 				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 0" Size="8"/>
@@ -361,25 +385,25 @@
 				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" Size="8" OffsA="72"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_GPI (EL3174-0002)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
