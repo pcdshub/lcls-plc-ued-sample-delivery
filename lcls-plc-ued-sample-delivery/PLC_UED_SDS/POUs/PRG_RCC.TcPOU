@@ -39,8 +39,8 @@ VAR
 
 
     {attribute 'pytmc' :=' pv: UED:RCC:GCP:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_GPI (EL3174-0002)^AI Standard Channel 1^Value'}
-	RCC_GCP_01 : FB_972;
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_GPI (EL3174-0002)^AI Standard Channel 1^Value'}
+    RCC_GCP_01 : FB_972;
 
 
     {attribute 'pytmc' :=' pv: UED:RCC:TC:01 '}
@@ -48,7 +48,7 @@ VAR
                                .bUnderrange :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Underrange;
                                .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
                                .iRaw		:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value '}
-   RCC_STC_01 : FB_TempSensor;	
+   RCC_STC_01 : FB_TempSensor;
 
     RCC_VRC_01_OPEN_OK : BOOL;
     RCC_VRC_02_OPEN_OK : BOOL;
