@@ -33,6 +33,9 @@
 		<Box File="Term 1 (EK1200).xti" Id="1">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
+		<Box File="Box 18 (EP9128-0021).xti" Id="18">
+			<EtherCAT PortABoxInfo="#x01000006"/>
+		</Box>
 		<EtherCAT/>
 	</Device>
 </TcSmItem>
