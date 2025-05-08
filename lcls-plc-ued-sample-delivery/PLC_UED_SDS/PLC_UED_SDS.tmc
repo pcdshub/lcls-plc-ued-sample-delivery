@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{A8605532-FF36-271F-C600-6D794A41248F}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{D58E5B30-AEB2-A721-887E-BE731DE30872}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General">ST_System</Name>
@@ -181,31 +181,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79275508</GetCodeOffs>
+        <GetCodeOffs>79303064</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79275544</GetCodeOffs>
+        <GetCodeOffs>79303100</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275552</GetCodeOffs>
+        <GetCodeOffs>79303108</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275532</GetCodeOffs>
+        <GetCodeOffs>79303088</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79275548</GetCodeOffs>
+        <GetCodeOffs>79303104</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1457,15 +1457,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275444</GetCodeOffs>
-        <SetCodeOffs>79275468</SetCodeOffs>
+        <GetCodeOffs>79303000</GetCodeOffs>
+        <SetCodeOffs>79303024</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79275484</GetCodeOffs>
-        <SetCodeOffs>79275496</SetCodeOffs>
+        <GetCodeOffs>79303040</GetCodeOffs>
+        <SetCodeOffs>79303052</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1706,31 +1706,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>79275600</GetCodeOffs>
+        <GetCodeOffs>79303156</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275580</GetCodeOffs>
+        <GetCodeOffs>79303136</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275668</GetCodeOffs>
+        <GetCodeOffs>79303224</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79275672</GetCodeOffs>
+        <GetCodeOffs>79303228</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79275628</GetCodeOffs>
+        <GetCodeOffs>79303184</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1742,7 +1742,7 @@
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79275676</GetCodeOffs>
+        <GetCodeOffs>79303232</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -2335,7 +2335,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>79275704</GetCodeOffs>
+        <GetCodeOffs>79303260</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -12333,6 +12333,19 @@ These features aren't disabled, they just aren't used, think child/parent classe
       </SubItem>
     </DataType>
     <DataType>
+      <Name Namespace="LCLS_Vacuum.PMPS">PE_Ranges</Name>
+      <Comment> Does nothing other than set the gvl for photon energy bitmask to one of two constants, K or L.
+ Workaround for compile defines not fully working for libraries at the time of writing this.
+ Otherwise I would have just used the compile define in the GVL declaration.</Comment>
+      <BitSize>32</BitSize>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name GUID="{56294066-FFF7-46F3-8206-FA06A30B13BA}" Namespace="PLC" TcBaseType="true">PlcTaskSystemInfo</Name>
       <BitSize>1024</BitSize>
       <SubItem>
@@ -12760,19 +12773,6 @@ These features aren't disabled, they just aren't used, think child/parent classe
           </Property>
         </Properties>
       </SubItem>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum.PMPS">PE_Ranges</Name>
-      <Comment> Does nothing other than set the gvl for photon energy bitmask to one of two constants, K or L.
- Workaround for compile defines not fully working for libraries at the time of writing this.
- Otherwise I would have just used the compile define in the GVL declaration.</Comment>
-      <BitSize>32</BitSize>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
     </DataType>
     <DataType>
       <Name Namespace="LCLS_General.Tc3_JsonXml">FB_JsonSaxWriter</Name>
@@ -15332,6 +15332,2287 @@ These features aren't disabled, they just aren't used, think child/parent classe
       </Properties>
     </DataType>
     <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">ST_ViciControl</Name>
+      <BitSize>720</BitSize>
+      <SubItem>
+        <Name>sViciReply</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iReqPos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>656</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xDirection</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>672</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iAddress</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>688</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iPortCount</Name>
+        <Type>INT</Type>
+        <Comment> Max Number of Ports Supported by Valve</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>704</BitOffs>
+        <Default>
+          <Value>12</Value>
+        </Default>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">ST_ViciStatus</Name>
+      <BitSize>1344</BitSize>
+      <SubItem>
+        <Name>sViciReq</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sViciReply</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>648</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iCurrPos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>1296</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: CurrentPos
+        io: i
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iReqPos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>1312</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xPosValid</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1328</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ComBuffer</Name>
+      <Comment> This data type will be used as a software character buffer
+   between serial line I/O and user functions as ReceiveByte
+   or SendByte.
+</Comment>
+      <BitSize>2512</BitSize>
+      <SubItem>
+        <Name>Buffer</Name>
+        <Type>BYTE</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>301</Elements>
+        </ArrayInfo>
+        <Comment> ringbuffer </Comment>
+        <BitSize>2408</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RdIdx</Name>
+        <Type>UINT</Type>
+        <Comment> first valid byte in ringbuffer </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2416</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>WrIdx</Name>
+        <Type>UINT</Type>
+        <Comment> first invalid byte in ringbuffer </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2432</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Count</Name>
+        <Type>UINT</Type>
+        <Comment> number of bytes in ringbuffer </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2448</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>FreeByte</Name>
+        <Type>UINT</Type>
+        <Comment> number of free bytes in ringbuffer </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2464</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type>UINT</Type>
+        <Comment> error code of serial line interface </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2480</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>blocked</Name>
+        <Type>BOOL</Type>
+        <Comment> semaphore for task synchronization </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>2496</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ClearComBuffer</Name>
+      <Comment>=================================================================
+ *	
+ *	Modul:	ClearComBuffer
+ *  			The function block clears the software read/write
+ *			buffer but it will not clear data buffers inside the
+ *			hardware e. g. KL-6xxx.
+ *	Date:	01.12.1998
+ *
+ *=================================================================
+ </Comment>
+      <BitSize>128</BitSize>
+      <SubItem>
+        <Name>Buffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nBlockedCounter</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>i</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>96</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Name>
+      <BitSize>16</BitSize>
+      <BaseType>INT</BaseType>
+      <EnumInfo>
+        <Text>COMERROR_NOERROR</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_PARAMETERCHANGED</Text>
+        <Enum>1</Enum>
+        <Comment> input parameters changed during reception </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_TXBUFFOVERRUN</Text>
+        <Enum>2</Enum>
+        <Comment> string &gt; transmit buffer </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_STRINGOVERRUN</Text>
+        <Enum>10</Enum>
+        <Comment> end of string </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_ZEROCHARINVALID</Text>
+        <Enum>11</Enum>
+        <Comment> string cannot receive zero characters </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPOINTER</Text>
+        <Enum>20</Enum>
+        <Comment> invalid data pointer, e. g. zero </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDRXPOINTER</Text>
+        <Enum>21</Enum>
+        <Comment> invalid data pointer for ReceiveData </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDRXLENGTH</Text>
+        <Enum>22</Enum>
+        <Comment> invalid length for ReceiveData, e. g. zero </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_DATASIZEOVERRUN</Text>
+        <Enum>23</Enum>
+        <Comment> end of data block </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPROCESSDATASIZE</Text>
+        <Enum>24</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_MODENOTSUPPORTED</Text>
+        <Enum>257</Enum>
+        <Comment> mode not supported (3-Byte Terminals connectd to bus controllers) </Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDCHANNELNUMBER</Text>
+        <Enum>258</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDBAUDRATE</Text>
+        <Enum>4097</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMDATABITS</Text>
+        <Enum>4098</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMSTOPBITS</Text>
+        <Enum>4099</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDPARITY</Text>
+        <Enum>4100</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDHANDSHAKE</Text>
+        <Enum>4101</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDNUMREGISTERS</Text>
+        <Enum>4102</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_INVALIDREGISTER</Text>
+        <Enum>4103</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>COMERROR_TIMEOUT</Text>
+        <Enum>4104</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">SendByte</Name>
+      <Comment>=================================================================
+ *
+ *	Modul:	SendByte
+ *			The function block writes one byte into
+ * 			the software buffer (ComBuffer).
+ *	Date: 	11.8.98
+ *
+ *=================================================================
+ </Comment>
+      <BitSize>128</BitSize>
+      <SubItem>
+        <Name>SendByte</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Busy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>48</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nBlockedCounter</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>96</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">_SendString</Name>
+      <BitSize>2336</BitSize>
+      <SubItem>
+        <Name>SendString</Name>
+        <Type>STRING(255)</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Busy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2080</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>2096</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TXbuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2112</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>pos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>2144</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Send</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">SendByte</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>2176</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>c</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2304</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ls</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>2320</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">SendString</Name>
+      <BitSize>3072</BitSize>
+      <SubItem>
+        <Name>SendString</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Busy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>680</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>688</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TXbuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>704</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SendStringStandard</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">_SendString</Type>
+        <BitSize>2336</BitSize>
+        <BitOffs>736</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ReceiveByte</Name>
+      <Comment>=================================================================
+ *	
+ *	Modul:	ReceiveByte
+ *			The function block reads one byte out of
+ * 			the software buffer (ComBuffer) if available.
+ *	Date: 	11.8.98
+ *
+ *=================================================================
+ </Comment>
+      <BitSize>128</BitSize>
+      <SubItem>
+        <Name>ByteReceived</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ReceivedByte</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>48</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nBlockedCounter</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>96</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">_ReceiveString</Name>
+      <BitSize>4736</BitSize>
+      <SubItem>
+        <Name>Prefix</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Suffix</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>680</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Timeout</Name>
+        <Type>TIME</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>1344</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Reset</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1376</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>pReceivedString</Name>
+        <Type PointerTo="1">BYTE</Type>
+        <Comment> Pointer to variable length string </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>1408</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SizeReceivedString</Name>
+        <Type>INT</Type>
+        <Comment> variable string size </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>1440</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>StringReceived</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1456</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Busy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1464</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>1472</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RxTimeout</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1488</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ErrorCountPrefix</Name>
+        <Type>INT</Type>
+        <Comment> invalid characters received before prefix </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>1504</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ReceivedPrefix</Name>
+        <Type>STRING(80)</Type>
+        <Comment> received prefix including invalid characters </Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>1520</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RXbuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2176</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RxString</Name>
+        <Type>STRING(255)</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>2208</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>state</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>4256</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>c</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>4272</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>l</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>4288</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>l2</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>4304</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>pl</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>4320</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sl</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>4336</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iTimeout</Name>
+        <Type>TIME</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>4352</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Receive</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ReceiveByte</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>4384</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TimeoutTimer</Name>
+        <Type Namespace="Tc2_Standard">TOF</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>4512</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ReceiveString</Name>
+      <BitSize>6912</BitSize>
+      <SubItem>
+        <Name>Prefix</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Suffix</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>680</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Timeout</Name>
+        <Type>TIME</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>1344</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Reset</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1376</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>StringReceived</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1384</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Busy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1392</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>1408</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RxTimeout</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1424</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ReceivedString</Name>
+        <Type ReferenceTo="true">STRING(80)</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>1440</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RXbuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>1472</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ReceiveStringStandard</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">_ReceiveString</Type>
+        <BitSize>4736</BitSize>
+        <BitOffs>1504</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ErrorCountPrefix</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>6240</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ReceivedPrefix</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>6256</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_ViciTransaction</Name>
+      <BitSize>91712</BitSize>
+      <SubItem>
+        <Name>i_xExecute</Name>
+        <Type>BOOL</Type>
+        <Comment> Rising edge execute </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_sSendData</Name>
+        <Type>STRING(80)</Type>
+        <Comment> Send Data </Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_iAddress</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>688</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_tTimeOut</Name>
+        <Type>TIME</Type>
+        <Comment> Maximum wait time for reply </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>704</BitOffs>
+        <Default>
+          <DateTime>t#10s</DateTime>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_CmdFlag</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>736</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xDone</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>744</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sResponseData</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>752</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1400</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xTimeout</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1408</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sResult</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>1416</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sLastSentString</Name>
+        <Type>STRING(80)</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>40</Elements>
+        </ArrayInfo>
+        <Comment> Last String Sent to Serial Device - for debugging </Comment>
+        <BitSize>25920</BitSize>
+        <BitOffs>2064</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sLastReceivedString</Name>
+        <Type>STRING(80)</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>40</Elements>
+        </ArrayInfo>
+        <Comment> Last String Received from Serial Device - for debugging </Comment>
+        <BitSize>25920</BitSize>
+        <BitOffs>27984</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iq_stSerialRXBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>53920</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iq_stSerialTXBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>53952</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>rtExecute</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>53984</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iStep</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>54048</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbClearComBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ClearComBuffer</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>54080</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbSendString</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">SendString</Type>
+        <BitSize>3072</BitSize>
+        <BitOffs>54208</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbReceiveString</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ReceiveString</Type>
+        <BitSize>6912</BitSize>
+        <BitOffs>57280</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sReceivedString</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>64192</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tonTimeout</Name>
+        <Type Namespace="Tc2_Standard">TON</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>64864</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sSendString</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>65088</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iStringTx</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>65744</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>iStringRx</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>65760</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>iStringTxRx</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>65776</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>sTxRxString</Name>
+        <Type>STRING(80)</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>40</Elements>
+        </ArrayInfo>
+        <BitSize>25920</BitSize>
+        <BitOffs>65792</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_ViciDriver</Name>
+      <BitSize>191072</BitSize>
+      <SubItem>
+        <Name>i_xExecute</Name>
+        <Type>BOOL</Type>
+        <Comment> rising edge execute </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_tTimeOut</Name>
+        <Type>TIME</Type>
+        <Comment> Maximum wait time for reply </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Default>
+          <DateTime>t#10s</DateTime>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_stControl</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_ViciControl</Type>
+        <BitSize>720</BitSize>
+        <BitOffs>96</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xDone</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>816</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>824</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xWarning</Name>
+        <Type>BOOL</Type>
+        <Comment> set in the event of an unexpected reply </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>832</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xTimeout</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>840</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sResult</Name>
+        <Type>STRING(255)</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>848</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sLastSentString</Name>
+        <Type>STRING(80)</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>40</Elements>
+        </ArrayInfo>
+        <Comment> Last String Sent to Serial Device - for debugging </Comment>
+        <BitSize>25920</BitSize>
+        <BitOffs>2896</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_sLastReceivedString</Name>
+        <Type>STRING(80)</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>40</Elements>
+        </ArrayInfo>
+        <Comment> Last String Received from Serial Device - for debugging </Comment>
+        <BitSize>25920</BitSize>
+        <BitOffs>28816</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_stStatus</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_ViciStatus</Type>
+        <BitSize>1344</BitSize>
+        <BitOffs>54736</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iq_stSerialRXBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>56096</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iq_stSerialTXBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>56128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iReqPosReverse</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>56160</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>rtExecute</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>56192</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iStep</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>56256</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sSendData</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>56272</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbViciTransaction</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">FB_ViciTransaction</Type>
+        <BitSize>91712</BitSize>
+        <BitOffs>56928</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>asReplyFields</Name>
+        <Type Namespace="Tc2_System">T_MaxString</Type>
+        <ArrayInfo>
+          <LBound>1</LBound>
+          <Elements>20</Elements>
+        </ArrayInfo>
+        <Comment>fbFormatString			: FB_FormatString;
+fbSplit					: FB_Split255;</Comment>
+        <BitSize>40960</BitSize>
+        <BitOffs>148640</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>wChecksum</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>189600</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>rtStartIntegration</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>189632</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>rtEndReset</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>189696</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sWorking</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>189760</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>strResponseExpected</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>190408</BitOffs>
+      </SubItem>
+      <Action>
+        <Name>_A_ClearStatus</Name>
+      </Action>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">EL6inData22B</Name>
+      <Comment> This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+</Comment>
+      <BitSize>192</BitSize>
+      <SubItem>
+        <Name>Status</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>D</Name>
+        <Type>BYTE</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>22</Elements>
+        </ArrayInfo>
+        <BitSize>176</BitSize>
+        <BitOffs>16</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">EL6outData22B</Name>
+      <Comment> This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+</Comment>
+      <BitSize>192</BitSize>
+      <SubItem>
+        <Name>Ctrl</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>D</Name>
+        <Type>BYTE</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>22</Elements>
+        </ArrayInfo>
+        <BitSize>176</BitSize>
+        <BitOffs>16</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">ST_SerialComm</Name>
+      <Comment> Generic serial comm necessities</Comment>
+      <BitSize>5408</BitSize>
+      <SubItem>
+        <Name>RxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComBuffer</Type>
+        <BitSize>2512</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComBuffer</Type>
+        <BitSize>2512</BitSize>
+        <BitOffs>2512</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>stComIn</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">EL6inData22B</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>5024</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>stComOut</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">EL6outData22B</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>5216</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ComSerialLineMode_t</Name>
+      <BitSize>16</BitSize>
+      <BaseType>INT</BaseType>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_DEFAULT</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_3B_ALTERNATIVE</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_5B_STANDARD</Text>
+        <Enum>2</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_KL6_22B_STANDARD</Text>
+        <Enum>3</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_PC_COM_PORT</Text>
+        <Enum>4</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_EL6_22B</Text>
+        <Enum>5</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SERIALLINEMODE_IE6_11B</Text>
+        <Enum>6</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">ComDebugBuffer</Name>
+      <BitSize>9648</BitSize>
+      <SubItem>
+        <Name>Buffer</Name>
+        <Type>INT</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>301</Elements>
+        </ArrayInfo>
+        <BitSize>4816</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Status</Name>
+        <Type>INT</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>301</Elements>
+        </ArrayInfo>
+        <BitSize>4816</BitSize>
+        <BitOffs>4816</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Idx</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>9632</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>hide</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_SerialCom">SerialLineControl</Name>
+      <Comment> =============================================================
+ *	Modul:	Serial line interface controller for background communication
+ *			supports multiple interface types like 
+ *			KL6xxx 3 byte alternative mode
+ *			KL6xxx 5 byte standard mode
+ *			KL6xxx 22 byte standard mode with extended process data interface
+ *			KL6xxx 64 byte PC COM port
+ *			EL6xxx 22 byte 
+ *			IP6xxx 11 byte
+ *			communication between a serial line hardware device and 
+ *			PLC communication buffers (RxBuffer, TxBuffer)
+ *
+ *	Date: 	21.12.2004
+ * ============================================================= </Comment>
+      <BitSize>10432</BitSize>
+      <SubItem>
+        <Name>Mode</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComSerialLineMode_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>pComIn</Name>
+        <Type>BYTE</Type>
+        <ArrayInfo PointerTo="1">
+          <LBound>0</LBound>
+          <Elements>66</Elements>
+        </ArrayInfo>
+        <Comment> must meet the maximum size of a hardware related data structure </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>pComOut</Name>
+        <Type>BYTE</Type>
+        <ArrayInfo PointerTo="1">
+          <LBound>0</LBound>
+          <Elements>66</Elements>
+        </ArrayInfo>
+        <Comment> must meet the maximum size of a hardware related data structure </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>96</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SizeComIn</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>Error</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>144</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ErrorID</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComError_t</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>160</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>192</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>RxBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom" ReferenceTo="true">ComBuffer</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nBlockedCounter_TxBuffer</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>nBlockedCounter_RxBuffer</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ComPortDebugBuffer</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">ComDebugBuffer</Type>
+        <BitSize>9648</BitSize>
+        <BitOffs>320</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>InvalidDataExchangeMode</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>9968</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RegisterMode</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>9984</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>pCTRL</Name>
+        <Type PointerTo="1">WORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>10016</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>pSTATUS</Name>
+        <Type PointerTo="1">WORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>10048</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>wCtrl</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10080</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>wStatus</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10096</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RxCount</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10112</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TxCount</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10128</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>DataIndex</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10144</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>DataCountMask</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10160</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>DataCountShift</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>10176</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ReceiveHandshakeBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10192</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TransmitHandshakeBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10208</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TransmitBufferSentBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10224</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ContinousModeStartBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10240</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ReceiveBufferFullBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10256</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ResetBit</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10272</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RR</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10288</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RA</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10304</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TR</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10320</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TA</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10336</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>IA</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10352</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>BUF_F</Name>
+        <Type>WORD</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10368</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>noTAcounter</Name>
+        <Type>BYTE</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>10384</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>initialized</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>10392</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>TransmitDataSent</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>10400</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>i</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>10416</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_SerialCommWrapper</Name>
+      <BitSize>10496</BitSize>
+      <SubItem>
+        <Name>stSerialComm</Name>
+        <Type Namespace="lcls_twincat_sample_delivery" ReferenceTo="true">ST_SerialComm</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>InOut</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbSerialLineControl</Name>
+        <Type Namespace="LCLS_General.Tc2_SerialCom">SerialLineControl</Type>
+        <BitSize>10432</BitSize>
+        <BitOffs>64</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_ViciValve</Name>
+      <BitSize>209152</BitSize>
+      <SubItem>
+        <Name>iAddress</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iNumOfPorts</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>48</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iReqPos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbViciDriver</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">FB_ViciDriver</Type>
+        <BitSize>191072</BitSize>
+        <BitOffs>96</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbViciSerial</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">FB_SerialCommWrapper</Type>
+        <BitSize>10496</BitSize>
+        <BitOffs>191168</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>stViciSerial</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_SerialComm</Type>
+        <BitSize>5408</BitSize>
+        <BitOffs>201664</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>stViciVlvCtrl</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_ViciControl</Type>
+        <BitSize>720</BitSize>
+        <BitOffs>207072</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>stViciVlvStatus</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_ViciStatus</Type>
+        <BitSize>1344</BitSize>
+        <BitOffs>207792</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">ST_4PViciValveSampleNames</Name>
+      <BitSize>2592</BitSize>
+      <SubItem>
+        <Name>s1</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>0</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: 01
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>s2</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>648</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: 02
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>s3</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>1296</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: 03
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>s4</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>1944</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: 04
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_4PortViciValve</Name>
+      <BitSize>211840</BitSize>
+      <SubItem>
+        <Name>iAdress</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbNporValve</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">FB_ViciValve</Type>
+        <BitSize>209152</BitSize>
+        <BitOffs>64</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iNumPorts</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>209216</BitOffs>
+        <Default>
+          <Value>4</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>iReqPos</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>209232</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: iReqPos
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>stSampleNames</Name>
+        <Type Namespace="lcls_twincat_sample_delivery">ST_4PViciValveSampleNames</Type>
+        <BitSize>2592</BitSize>
+        <BitOffs>209248</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: SampleNames
+        io: io
+     </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_sample_delivery">FB_SolenoidPair</Name>
+      <BitSize>64</BitSize>
+      <SubItem>
+        <Name>q_xDO1</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: Valve:01:Open
+        io: io
+     </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xDO2</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: Valve:02:Open
+        io: io
+     </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_xEpics</Name>
+        <Type>BOOL</Type>
+        <Comment> open A when False, open B when True</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>48</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: Switch
+        io: o
+     </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_xDebug</Name>
+        <Type>BOOL</Type>
+        <Comment> if True, do not set valves according to i_xEpics</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>56</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: Debug
+        io: o
+     </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name Namespace="LCLS_Vacuum">E_ValvePositionState</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
@@ -16412,8 +18693,7 @@ interlocking logic outside this function block.
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_901_ECAT</Name>
-      <Comment> works for 901 with Ethercat interface</Comment>
+      <Name Namespace="LCLS_Vacuum">FB_972</Name>
       <BitSize>86464</BitSize>
       <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
       <SubItem>
@@ -16435,70 +18715,27 @@ interlocking logic outside this function block.
         </Properties>
       </SubItem>
       <SubItem>
-        <Name>bInit</Name>
-        <Type>BOOL</Type>
-        <Comment>IO</Comment>
-        <BitSize>8</BitSize>
+        <Name>rV</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
         <BitOffs>86368</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iTermBits</Name>
+        <Type>UINT</Type>
+        <Comment> The terminal's maximum value in bits</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>86400</BitOffs>
         <Default>
-          <Bool>true</Bool>
+          <Value>32767</Value>
         </Default>
       </SubItem>
       <SubItem>
-        <Name>xPress_OK</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>86376</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>xOverrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>86384</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>xUnderrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>86392</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
         <Name>i_iPRESS_R</Name>
-        <Type>REAL</Type>
+        <Type>INT</Type>
         <Comment> input Pressure // Link to analog Input</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>86400</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bWcstate</Name>
-        <Type>BOOL</Type>
-        <Comment> 0: date valid, 1: date invalid</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>86432</BitOffs>
+        <BitSize>16</BitSize>
+        <BitOffs>86416</BitOffs>
         <Properties>
           <Property>
             <Name>TcAddressType</Name>
@@ -16510,11 +18747,19 @@ interlocking logic outside this function block.
         <Name>ACT_Logger</Name>
       </Action>
       <Action>
-        <Name>ACT_Init</Name>
-      </Action>
-      <Action>
         <Name>ACT_IO</Name>
       </Action>
+      <Method>
+        <Name>M_SetBits</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>TermBits</Name>
+          <Comment> The terminal's maximum value in bits</Comment>
+          <Type>UINT</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
       <Properties>
         <Property>
           <Name>PouType</Name>
@@ -16691,6 +18936,28 @@ interlocking logic outside this function block.
         <Type>UINT</Type>
         <BitSize>16</BitSize>
         <BitOffs>48</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{5456DAC5-9FA5-4A6B-B497-840FCC690FDD}" Namespace="PLC" TcBaseType="true">PlcLicenseInfo</Name>
+      <BitSize>1024</BitSize>
+      <SubItem>
+        <Name>LicenseId</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000021}">GUID</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Instances</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>128</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>LicenseName</Name>
+        <Type GUID="{18071995-0000-0000-0000-00010000005F}">STRING(95)</Type>
+        <BitSize>768</BitSize>
+        <BitOffs>256</BitOffs>
       </SubItem>
     </DataType>
     <DataType>
@@ -17430,7 +19697,32 @@ interlocking logic outside this function block.
     <Module GUID="{DFC43783-03DA-49F9-8D2E-D378A5BF5ECC}" TcSmClass="TComPlcObjDef" TargetPlatform="TwinCAT RT (x86)">
       <Name>PLC_UED_SDS</Name>
       <CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
-      <Licenses/>
+      <Licenses>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+        <License>
+          <LicenseId>{bca6ee0a-9ce1-4d3f-98ca-413abc0d94fd}</LicenseId>
+          <Comment>TF6340 TC3 Serial-Communication</Comment>
+        </License>
+      </Licenses>
       <Contexts>
         <Context>
           <Id NeedCalleeCall="true">0</Id>
@@ -17446,9 +19738,61 @@ interlocking logic outside this function block.
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>79888384</ByteSize>
+          <ByteSize>80019456</ByteSize>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_01.i_xClsLS</Name>
+            <Name>MAIN.fbValve.fbNporValve.stViciSerial.stComIn</Name>
+            <BitSize>192</BitSize>
+            <BaseType Namespace="LCLS_General.Tc2_SerialCom">EL6inData22B</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633840064</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.SolenoidPairA.i_xEpics</Name>
+            <Comment> open A when False, open B when True</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: Switch
+        io: o
+     </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633845200</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.SolenoidPairA.i_xDebug</Name>
+            <Comment> if True, do not set valves according to i_xEpics</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: Debug
+        io: o
+     </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633845208</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_01.i_xClsLS</Name>
             <Comment>IO
 	i_xOpnLS	AT%I*: BOOL;</Comment>
             <BitSize>8</BitSize>
@@ -17459,10 +19803,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633714784</BitOffs>
+            <BitOffs>633930656</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
+            <Name>PRG_RCC.RCC_VRC_02.i_xClsLS</Name>
             <Comment>IO
 	i_xOpnLS	AT%I*: BOOL;</Comment>
             <BitSize>8</BitSize>
@@ -17473,10 +19817,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633799712</BitOffs>
+            <BitOffs>634015584</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_03.i_xClsLS</Name>
+            <Name>PRG_RCC.RCC_VRC_03.i_xClsLS</Name>
             <Comment>IO
 	i_xOpnLS	AT%I*: BOOL;</Comment>
             <BitSize>8</BitSize>
@@ -17487,10 +19831,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633884640</BitOffs>
+            <BitOffs>634100512</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_04.i_xClsLS</Name>
+            <Name>PRG_RCC.RCC_VRC_04.i_xClsLS</Name>
             <Comment>IO
 	i_xOpnLS	AT%I*: BOOL;</Comment>
             <BitSize>8</BitSize>
@@ -17501,72 +19845,23 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633969568</BitOffs>
+            <BitOffs>634185440</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01.xPress_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634055976</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01.xOverrange</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634055984</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01.xUnderrange</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634055992</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01.i_iPRESS_R</Name>
+            <Name>PRG_RCC.RCC_GCP_01.i_iPRESS_R</Name>
             <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
             <Properties>
               <Property>
                 <Name>TcAddressType</Name>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634056000</BitOffs>
+            <BitOffs>634271888</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01.bWcstate</Name>
-            <Comment> 0: date valid, 1: date invalid</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634056032</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_STC_01.bError</Name>
+            <Name>PRG_RCC.RCC_STC_01.bError</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Default>
@@ -17587,10 +19882,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634056264</BitOffs>
+            <BitOffs>634272136</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_STC_01.bUnderrange</Name>
+            <Name>PRG_RCC.RCC_STC_01.bUnderrange</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
@@ -17599,10 +19894,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634056272</BitOffs>
+            <BitOffs>634272144</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_STC_01.bOverrange</Name>
+            <Name>PRG_RCC.RCC_STC_01.bOverrange</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
@@ -17611,10 +19906,10 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634056280</BitOffs>
+            <BitOffs>634272152</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_STC_01.iRaw</Name>
+            <Name>PRG_RCC.RCC_STC_01.iRaw</Name>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
             <Properties>
@@ -17623,52 +19918,107 @@ interlocking logic outside this function block.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634056288</BitOffs>
+            <BitOffs>634272160</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>79888384</ByteSize>
+          <ByteSize>80019456</ByteSize>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
+            <Name>MAIN.fbValve.fbNporValve.stViciSerial.stComOut</Name>
+            <BitSize>192</BitSize>
+            <BaseType Namespace="LCLS_General.Tc2_SerialCom">EL6outData22B</BaseType>
             <Properties>
               <Property>
                 <Name>TcAddressType</Name>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633714792</BitOffs>
+            <BitOffs>633840256</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+            <Name>MAIN.SolenoidPairA.q_xDO1</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: Valve:01:Open
+        io: io
+     </Value>
+              </Property>
               <Property>
                 <Name>TcAddressType</Name>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633799720</BitOffs>
+            <BitOffs>633845184</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+            <Name>MAIN.SolenoidPairA.q_xDO2</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: Valve:02:Open
+        io: io
+     </Value>
+              </Property>
               <Property>
                 <Name>TcAddressType</Name>
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633884648</BitOffs>
+            <BitOffs>633845192</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
+            <Name>MAIN.PURGE_VRC_01_CTL</Name>
+            <Comment> Purge Valves</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: UED:SDS:PURGE:A</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 11^Output</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633845216</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.PURGE_VRC_02_CTL</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: UED:SDS:PURGE:B</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 12^Output</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633845224</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_01.q_xOPN_DO</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
             <Properties>
@@ -17677,14 +20027,50 @@ interlocking logic outside this function block.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633969576</BitOffs>
+            <BitOffs>633930664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634015592</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634100520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_04.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634185448</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>79888384</ByteSize>
+          <ByteSize>80019456</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -23607,20 +25993,6 @@ interlocking logic outside this function block.
             <BitOffs>3365992</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Global_Constants.EMPTY_SEVERITY</Name>
-            <BitSize>16</BitSize>
-            <BaseType GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</BaseType>
-            <Default>
-              <EnumText>TcEventSeverity.Verbose</EnumText>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>3366384</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_IoFunctions</Name>
             <BitSize>288</BitSize>
             <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
@@ -23737,6 +26109,506 @@ interlocking logic outside this function block.
             <BitOffs>3366976</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_COMPORT</Name>
+            <Comment> constants for error codes returned as nErrorID output of SerialLineControlADS 
+ invalid input parameters </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36865</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367264</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_CMD</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36866</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367296</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_DATAPOINTER</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36867</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367328</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_CFGSTLEN</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36881</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367360</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_CFGSTVER</Name>
+            <Comment> unknown configuration structure version </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36882</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_TL</Name>
+            <Comment> invalid TraceLevel </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36883</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367424</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_BAUDRATE</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36897</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_PARITY</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36898</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367488</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_DATABITS</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36899</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_STOPBITS</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36900</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_DTR_CTRL</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36901</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367584</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_RTS_CTRL</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36902</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367616</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_CTS_OUTCTRL</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36903</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367648</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_DSR_OUTCTRL</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36904</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_INVALID_DSR_SENS</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36905</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367712</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_NOT_INIT</Name>
+            <Comment> Specific Error Codes </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36913</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367744</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_RD_BUFFER_OVERRUN</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36914</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367776</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_PORT_CONNECTED</Name>
+            <Comment> port already opened by the server </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36915</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367808</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_PORT_NOT_CONNECTED</Name>
+            <Comment> port not yet opened by the server </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36916</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_RD_THREAD_TIMEOUT</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36917</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367872</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_WR_THREAD_TIMEOUT</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36918</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367904</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_RD_FAILURE</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36919</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_WR_FAILURE</Name>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>36920</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3367968</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.COMERRORADS_SERVER_INCOMPATIBLE</Name>
+            <Comment> server version incompatible </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>37121</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368000</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.ASCII_STX</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BYTE</BaseType>
+            <Default>
+              <Value>2</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.ASCII_ETX</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BYTE</BaseType>
+            <Default>
+              <Value>3</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.ASCII_DLE</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BYTE</BaseType>
+            <Default>
+              <Value>16</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.ASCII_NAK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BYTE</BaseType>
+            <Default>
+              <Value>21</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368560</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Param_TcUnit.LogExtendedResults</Name>
+            <Comment> TcUnit logs complete test results. These include:
+         - Number of test suites
+         - Number of tests
+         - Number of successful tests
+         - Number of failed tests
+         - Any eventual failed assertion (with the expected &amp; actual value plus an user defined message)
+       These are all printed to the ADS logger (Visual Studio error list) marked with ERROR criticality
+
+       On top of this TcUnit also reports some statistics/extended information with HINT/INFO criticality.
+       These statistics are more detailed results of the tests. This information is used when results are
+       being collected by an external software (such as TcUnit-Runner) to do for example Jenkins integration.
+       This extra information however takes time to print, so by setting the following parameter to FALSE
+       it will speed up TcUnit finishing. </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368568</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.MAX_RETRIES</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Default>
+              <Value>5</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368576</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Constants.EMPTY_SEVERITY</Name>
+            <BitSize>16</BitSize>
+            <BaseType GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</BaseType>
+            <Default>
+              <EnumText>TcEventSeverity.Verbose</EnumText>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368592</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.TIMEOUT_ZVZ</Name>
+            <Comment> maximale Zeichenverzugszeit </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>220</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368608</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.TIMEOUT_QVZ</Name>
+            <Comment> maximale Quittungsverzugszeit </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>2000</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368640</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.TIMEOUT_WVZ</Name>
+            <Comment> maximale Wiederholungsverzugszeit </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>4000</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3368672</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Global_Constants.EMPTY_EVENT_CLASS</Name>
             <BitSize>128</BitSize>
             <BaseType GUID="{18071995-0000-0000-0000-000000000021}">GUID</BaseType>
@@ -23791,7 +26663,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367264</BitOffs>
+            <BitOffs>3368704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Constants.EMPTY_EVENT_ID</Name>
@@ -23805,7 +26677,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367392</BitOffs>
+            <BitOffs>3368832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Constants.SUCCESS_EVENT</Name>
@@ -23870,7 +26742,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367424</BitOffs>
+            <BitOffs>3368864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.nLangId_OnlineMonitoring</Name>
@@ -23885,7 +26757,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367616</BitOffs>
+            <BitOffs>3369056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>ParameterList.cSourceNameSize</Name>
@@ -23900,7 +26772,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367648</BitOffs>
+            <BitOffs>3369088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc3_EventLogger</Name>
@@ -23940,7 +26812,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367680</BitOffs>
+            <BitOffs>3369120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_INTERNAL.UNINITIALIZED_CLASS_GUID</Name>
@@ -23998,7 +26870,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3367968</BitOffs>
+            <BitOffs>3369408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>.TCPADS_MAXUDP_BUFFSIZE</Name>
@@ -24012,7 +26884,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368096</BitOffs>
+            <BitOffs>3369536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc3_JsonXml</Name>
@@ -24052,7 +26924,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368128</BitOffs>
+            <BitOffs>3369568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.MaxNumberOfTestSuites</Name>
@@ -24066,7 +26938,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368416</BitOffs>
+            <BitOffs>3369856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite</Name>
@@ -24080,7 +26952,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368432</BitOffs>
+            <BitOffs>3369872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.MaxNumberOfAssertsForEachTestSuite</Name>
@@ -24094,34 +26966,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368448</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Param_TcUnit.LogExtendedResults</Name>
-            <Comment> TcUnit logs complete test results. These include:
-         - Number of test suites
-         - Number of tests
-         - Number of successful tests
-         - Number of failed tests
-         - Any eventual failed assertion (with the expected &amp; actual value plus an user defined message)
-       These are all printed to the ADS logger (Visual Studio error list) marked with ERROR criticality
-
-       On top of this TcUnit also reports some statistics/extended information with HINT/INFO criticality.
-       These statistics are more detailed results of the tests. This information is used when results are
-       being collected by an external software (such as TcUnit-Runner) to do for example Jenkins integration.
-       This extra information however takes time to print, so by setting the following parameter to FALSE
-       it will speed up TcUnit finishing. </Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>3368464</BitOffs>
+            <BitOffs>3369888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.xUnitEnablePublish</Name>
@@ -24136,7 +26981,19 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368472</BitOffs>
+            <BitOffs>3369904</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.TestSuiteIsRegistered</Name>
+            <Comment> Indication of whether the last instantiated test suite has an assert instance created </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3369912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.xUnitBufferSize</Name>
@@ -24151,7 +27008,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368480</BitOffs>
+            <BitOffs>3369920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.xUnitFilePath</Name>
@@ -24166,7 +27023,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3368512</BitOffs>
+            <BitOffs>3369952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.AdsLogMessageFifoRingBufferSize</Name>
@@ -24184,19 +27041,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3370560</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TcUnit.TestSuiteIsRegistered</Name>
-            <Comment> Indication of whether the last instantiated test suite has an assert instance created </Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>3370576</BitOffs>
+            <BitOffs>3372000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.CurrentTestIsFinished</Name>
@@ -24208,7 +27053,21 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3370584</BitOffs>
+            <BitOffs>3372016</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TcUnit.IgnoreCurrentTest</Name>
+            <Comment> This is a flag that indicates that the current test should be ignored, and
+       thus that all assertions under it should be ignored as well. A test can be ignored either
+       because the user has requested so, or because the test is a duplicate name </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>3372024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Param_TcUnit.TimeBetweenTestSuitesExecution</Name>
@@ -24224,7 +27083,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3370592</BitOffs>
+            <BitOffs>3372032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.TcUnitRunner</Name>
@@ -24235,7 +27094,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>3370624</BitOffs>
+            <BitOffs>3372064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.CurrentTestSuiteBeingCalled</Name>
@@ -24247,7 +27106,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625197824</BitOffs>
+            <BitOffs>625199264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.CurrentTestNameBeingCalled</Name>
@@ -24259,27 +27118,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625197856</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TcUnit.IgnoreCurrentTest</Name>
-            <Comment> This is a flag that indicates that the current test should be ignored, and
-       thus that all assertions under it should be ignored as well. A test can be ignored either
-       because the user has requested so, or because the test is a duplicate name </Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>625199904</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_RCC.RCC_VRC_01_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>625199912</BitOffs>
+            <BitOffs>625199296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.NumberOfInitializedTestSuites</Name>
@@ -24295,7 +27134,21 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625199920</BitOffs>
+            <BitOffs>625201344</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.gc_iSizeOfGGOArray</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Default>
+              <Value>50</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>625201360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.TestSuiteAddresses</Name>
@@ -24310,7 +27163,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625199936</BitOffs>
+            <BitOffs>625201376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.CurrentlyRunningOrderedTestInTestSuite</Name>
@@ -24328,7 +27181,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625231936</BitOffs>
+            <BitOffs>625233376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TcUnit.AdsMessageQueue</Name>
@@ -24340,7 +27193,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>625247936</BitOffs>
+            <BitOffs>625249376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_TcUnit</Name>
@@ -24376,21 +27229,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633568800</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.gc_iSizeOfGGOArray</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Default>
-              <Value>50</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633569088</BitOffs>
+            <BitOffs>633570240</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.gc_GaugeValidState</Name>
@@ -24404,7 +27243,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633569104</BitOffs>
+            <BitOffs>633570528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.g_iSizeOfGGOArray</Name>
@@ -24418,7 +27257,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633569120</BitOffs>
+            <BitOffs>633570544</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.g_stSystem</Name>
@@ -24435,46 +27274,21 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633569136</BitOffs>
+            <BitOffs>633570560</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_RCC.RCC_VRC_02_OPEN_OK</Name>
+            <Name>GVL_SAMPLE.g_xFirstPass</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
-            <BitOffs>633569176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Global_Variables.g_DummyVG</Name>
-            <BitSize>1056</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633569184</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Global_Variables.fbGetCurTaskIdx</Name>
-            <BitSize>128</BitSize>
-            <BaseType Namespace="Tc2_System">GETCURTASKINDEX</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633570240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Global_Variables.TaskInfo</Name>
-            <BitSize>1024</BitSize>
-            <BaseType GUID="{56294066-FFF7-46F3-8206-FA06A30B13BA}">PlcTaskSystemInfo</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633570368</BitOffs>
+            <BitOffs>633570600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PfeifferParameters.gcMaxPfeifferPumps</Name>
@@ -24489,22 +27303,92 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633571392</BitOffs>
+            <BitOffs>633570608</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PMPS_GVL.AUX_ATTENUATORS</Name>
-            <Comment> Maximum # of attenuators in the PMPS</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>16</Value>
-            </Default>
+            <Name>Global_Variables.g_DummyVG</Name>
+            <BitSize>1056</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633571408</BitOffs>
+            <BitOffs>633570624</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.fbGetCurTaskIdx</Name>
+            <BitSize>128</BitSize>
+            <BaseType Namespace="Tc2_System">GETCURTASKINDEX</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633571680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.PERange</Name>
+            <Comment>Included to place the ev ranges properly</Comment>
+            <BitSize>32</BitSize>
+            <BaseType Namespace="LCLS_Vacuum.PMPS">PE_Ranges</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633571808</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Variables.TaskInfo</Name>
+            <BitSize>1024</BitSize>
+            <BaseType GUID="{56294066-FFF7-46F3-8206-FA06A30B13BA}">PlcTaskSystemInfo</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633571840</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Version.stLibVersion_LCLSVacuumSerialDriverLib</Name>
+            <BitSize>288</BitSize>
+            <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.iMajor</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iMinor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iBuild</Name>
+                <Value>2</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iRevision</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.nFlags</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sVersion</Name>
+                <String>1.3.2</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633572864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.stRequestedBeamParameters</Name>
@@ -24524,7 +27408,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633571424</BitOffs>
+            <BitOffs>633573152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.stCurrentBeamParameters</Name>
@@ -24544,7 +27428,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633573184</BitOffs>
+            <BitOffs>633574912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.g_areVBoundaries</Name>
@@ -24569,19 +27453,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633574944</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.PERange</Name>
-            <Comment>Included to place the ev ranges properly</Comment>
-            <BitSize>32</BitSize>
-            <BaseType Namespace="LCLS_Vacuum.PMPS">PE_Ranges</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633575968</BitOffs>
+            <BitOffs>633576672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.EXCLUDED_ASSERTION_ID</Name>
@@ -24596,35 +27468,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576096</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.VISIBLE_TEST_VELOCITY</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Default>
-              <Value>10</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633576128</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.FAST_TEST_VELOCITY</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Default>
-              <Value>100</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633576192</BitOffs>
+            <BitOffs>633577792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.MAX_DEVICE_STATES</Name>
@@ -24638,7 +27482,35 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576256</BitOffs>
+            <BitOffs>633577824</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.VISIBLE_TEST_VELOCITY</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LREAL</BaseType>
+            <Default>
+              <Value>10</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633577856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.FAST_TEST_VELOCITY</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LREAL</BaseType>
+            <Default>
+              <Value>100</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633577920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.TRANS_SCALING_FACTOR</Name>
@@ -24653,7 +27525,22 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576288</BitOffs>
+            <BitOffs>633577984</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.AUX_ATTENUATORS</Name>
+            <Comment> Maximum # of attenuators in the PMPS</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>16</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633578016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.MAX_VETO_DEVICES</Name>
@@ -24667,7 +27554,68 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576320</BitOffs>
+            <BitOffs>633578032</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.stAttenuators</Name>
+            <BitSize>64</BitSize>
+            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_PMPS_Attenuator</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.nTran</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.xAttOK</Name>
+                <Value>1</Value>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633578048</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.cstFullBeam</Name>
+            <BitSize>1760</BitSize>
+            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_BeamParams</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)FullBeamCnst
+        io: i
+        archive: 1Hz monitor
+        field: DESC Full beam constant
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633578112</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.cst0RateBeam</Name>
+            <BitSize>1760</BitSize>
+            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_BeamParams</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)0RateBeamCnst
+        io: i
+        archive: 1Hz monitor
+        field: DESC 0-rate beam constant
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633579872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.cnMaxStateArrayLen</Name>
@@ -24692,68 +27640,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576336</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.stAttenuators</Name>
-            <BitSize>64</BitSize>
-            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_PMPS_Attenuator</BaseType>
-            <Default>
-              <SubItem>
-                <Name>.nTran</Name>
-                <Value>1</Value>
-              </SubItem>
-              <SubItem>
-                <Name>.xAttOK</Name>
-                <Value>1</Value>
-              </SubItem>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633576352</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.cstFullBeam</Name>
-            <BitSize>1760</BitSize>
-            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_BeamParams</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: @(PREFIX)FullBeamCnst
-        io: i
-        archive: 1Hz monitor
-        field: DESC Full beam constant
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633576416</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.cst0RateBeam</Name>
-            <BitSize>1760</BitSize>
-            <BaseType Namespace="LCLS_Vacuum.PMPS">ST_BeamParams</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: @(PREFIX)0RateBeamCnst
-        io: i
-        archive: 1Hz monitor
-        field: DESC 0-rate beam constant
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633578176</BitOffs>
+            <BitOffs>633581632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.MAX_APERTURES</Name>
@@ -24768,21 +27655,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633579936</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_GVL.g_cBoundaries</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Default>
-              <Value>31</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633579952</BitOffs>
+            <BitOffs>633581648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.DUMMY_AUX_ATT_ARRAY</Name>
@@ -24801,7 +27674,36 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633579968</BitOffs>
+            <BitOffs>633581664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_GVL.g_cBoundaries</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Default>
+              <Value>31</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633582688</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PMPS_PARAM.MAX_FAST_FAULTS</Name>
+            <Comment> Max fast faults for an FFO</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>50</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633582704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.reVHyst</Name>
@@ -24828,7 +27730,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633580992</BitOffs>
+            <BitOffs>633582720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.g_areVBoundariesL</Name>
@@ -24983,7 +27885,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633581024</BitOffs>
+            <BitOffs>633582752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.g_areVBoundariesK</Name>
@@ -25138,34 +28040,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633582048</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PMPS_PARAM.MAX_FAST_FAULTS</Name>
-            <Comment> Max fast faults for an FFO</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>50</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633583072</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_RCC.RCC_VRC_03_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>633583088</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>PRG_RCC.RCC_VRC_04_OPEN_OK</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>633583096</BitOffs>
+            <BitOffs>633583776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_PARAM.MAX_ASSERTIONS</Name>
@@ -25180,7 +28055,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633583104</BitOffs>
+            <BitOffs>633584800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_PARAM.TRANS_MARGIN</Name>
@@ -25195,7 +28070,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633583136</BitOffs>
+            <BitOffs>633584832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_TOOLS.fbJson</Name>
@@ -25206,7 +28081,47 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633583168</BitOffs>
+            <BitOffs>633584864</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Global_Version.stLibVersion_PMPS</Name>
+            <BitSize>288</BitSize>
+            <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
+            <Default>
+              <SubItem>
+                <Name>.iMajor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iMinor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iBuild</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iRevision</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.nFlags</Name>
+                <Value>1</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sVersion</Name>
+                <String>3.3.0</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_MC2</Name>
@@ -25246,7 +28161,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633583424</BitOffs>
+            <BitOffs>633585408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.TcMcGlobal</Name>
@@ -25257,7 +28172,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633583712</BitOffs>
+            <BitOffs>633585696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.DEFAULT_HOME_POSITION</Name>
@@ -25271,7 +28186,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633590720</BitOffs>
+            <BitOffs>633592704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.DEFAULT_BACKLASHVALUE</Name>
@@ -25285,7 +28200,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633590784</BitOffs>
+            <BitOffs>633592768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_Math</Name>
@@ -25321,7 +28236,7 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633590848</BitOffs>
+            <BitOffs>633592832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_DataExchange</Name>
@@ -25361,25 +28276,88 @@ interlocking logic outside this function block.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633591136</BitOffs>
+            <BitOffs>633593120</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT</Name>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
+            <Name>Global_Version.stLibVersion_Tc2_SUPS</Name>
+            <BitSize>288</BitSize>
+            <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
             <Default>
-              <Value>10</Value>
+              <SubItem>
+                <Name>.iMajor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iMinor</Name>
+                <Value>3</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iBuild</Name>
+                <Value>8</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.iRevision</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.nFlags</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>.sVersion</Name>
+                <String>3.3.8.0</String>
+              </SubItem>
             </Default>
             <Properties>
               <Property>
-                <Name>pytmc</Name>
-                <Value> pv: UED:GCP:01:INLK_Setpoint </Value>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633629280</BitOffs>
+            <BitOffs>633593408</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.xSystemOverrideMode_RCC</Name>
+            <Name>MAIN.fbValve</Name>
+            <Comment> 4 Port Valve</Comment>
+            <BitSize>211840</BitSize>
+            <BaseType Namespace="lcls_twincat_sample_delivery">FB_4PortViciValve</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: UED:SDS:VICI:01</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.fbNporValve.stViciSerial.stComIn.Status := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)^COM TxPDO-Map Inputs Channel 2^Status;
+                              .fbNporValve.stViciSerial.stComOut.Ctrl := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)^COM RxPDO-Map Outputs Channel 2^Ctrl
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>633633312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.SolenoidPairA</Name>
+            <Comment> ON/OFF Valves</Comment>
+            <BitSize>64</BitSize>
+            <BaseType Namespace="lcls_twincat_sample_delivery">FB_SolenoidPair</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>pv: UED:SDS:SPR:A</Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.q_xDO1 := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 9^Output;
+                              .q_xDO2 := TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)^Channel 10^Output
+    </Value>
+              </Property>
+            </Properties>
+            <BitOffs>633845152</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.xSystemOverrideMode_RCC</Name>
             <Comment> OverrideMode </Comment>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -25391,74 +28369,17 @@ interlocking logic outside this function block.
                 <Name>pytmc</Name>
                 <Value>pv: UED:RCC:VAC:OVRD_MODE</Value>
               </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
             </Properties>
-            <BitOffs>633629824</BitOffs>
+            <BitOffs>633845232</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.bLittleEndian</Name>
-            <Comment> Does the target support multiple cores?</Comment>
+            <Name>PRG_RCC.RCC_VRC_01_OPEN_OK</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633629840</BitOffs>
+            <BitOffs>633845240</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633629848</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nRegisterSize</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>WORD</BaseType>
-            <Default>
-              <Value>32</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633629856</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nPackMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>8</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633629872</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_RCC.RCC_VRC_01</Name>
+            <Name>PRG_RCC.RCC_VRC_01</Name>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25471,14 +28392,11 @@ interlocking logic outside this function block.
                 <Value>.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 1^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 1^Output</Value>
               </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
             </Properties>
-            <BitOffs>633629888</BitOffs>
+            <BitOffs>633845760</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_02</Name>
+            <Name>PRG_RCC.RCC_VRC_02</Name>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25491,14 +28409,11 @@ interlocking logic outside this function block.
                 <Value>.i_xClsLS	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 2^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 2^Output</Value>
               </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
             </Properties>
-            <BitOffs>633714816</BitOffs>
+            <BitOffs>633930688</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_03</Name>
+            <Name>PRG_RCC.RCC_VRC_03</Name>
             <Comment> RIX RCC USES
 {attribute 'pytmc' :=' pv: UED:RCC:VRC:02 '}
 {attribute 'TcLinkTo' := 	'.i_xOpnLS	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
@@ -25517,14 +28432,11 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 3^Input;
                                 .q_xOPN_DO	:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 3^Output</Value>
               </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
             </Properties>
-            <BitOffs>633799744</BitOffs>
+            <BitOffs>634015616</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_VRC_04</Name>
+            <Name>PRG_RCC.RCC_VRC_04</Name>
             <BitSize>84928</BitSize>
             <BaseType Namespace="LCLS_Vacuum">FB_VRC_NC_ClsLS</BaseType>
             <Properties>
@@ -25537,16 +28449,13 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Value>.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)^Channel 4^Input;
                                 .q_xOPN_DO	:=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)^Channel 4^Output</Value>
               </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
             </Properties>
-            <BitOffs>633884672</BitOffs>
+            <BitOffs>634100544</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_GCP_01</Name>
+            <Name>PRG_RCC.RCC_GCP_01</Name>
             <BitSize>86464</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_901_ECAT</BaseType>
+            <BaseType Namespace="LCLS_Vacuum">FB_972</BaseType>
             <Properties>
               <Property>
                 <Name>pytmc</Name>
@@ -25554,20 +28463,13 @@ RCC_VRC_02 : FB_VRC;</Comment>
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.xPress_OK		:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
-                                 .xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
-                                .xUnderrange 	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Underrange Exceeded;
-                                .i_iPRESS_R 	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value;
-                                .bWcstate 		:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^WcState^WcState</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_GPI (EL3174-0002)^AI Standard Channel 1^Value</Value>
               </Property>
             </Properties>
-            <BitOffs>633969600</BitOffs>
+            <BitOffs>634185472</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_RCC.RCC_STC_01</Name>
+            <Name>PRG_RCC.RCC_STC_01</Name>
             <BitSize>256</BitSize>
             <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
             <Properties>
@@ -25582,11 +28484,71 @@ RCC_VRC_02 : FB_VRC;</Comment>
                                .bOverrange 	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Status^Overrange ;
                                .iRaw		:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)^TC Inputs Channel 1^Value </Value>
               </Property>
+            </Properties>
+            <BitOffs>634271936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_02_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>634272192</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_03_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>634272200</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_VRC_04_OPEN_OK</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>634272208</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT</Name>
+            <BitSize>32</BitSize>
+            <BaseType>REAL</BaseType>
+            <Default>
+              <Value>10</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: UED:GCP:01:INLK_Setpoint </Value>
+              </Property>
+            </Properties>
+            <BitOffs>634272224</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bLittleEndian</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056064</BitOffs>
+            <BitOffs>634272768</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634272776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -25616,7 +28578,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056320</BitOffs>
+            <BitOffs>634272784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -25646,7 +28608,37 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056384</BitOffs>
+            <BitOffs>634272848</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nRegisterSize</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>WORD</BaseType>
+            <Default>
+              <Value>32</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634272912</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nPackMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>8</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634272928</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bFPUSupport</Name>
@@ -25661,7 +28653,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056448</BitOffs>
+            <BitOffs>634272944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -25675,7 +28667,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056456</BitOffs>
+            <BitOffs>634272952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -25690,7 +28682,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056480</BitOffs>
+            <BitOffs>634272960</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -25705,7 +28697,76 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056512</BitOffs>
+            <BitOffs>634272992</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
+            <BitSize>1024</BitSize>
+            <BaseType GUID="{5456DAC5-9FA5-4A6B-B497-840FCC690FDD}">PlcLicenseInfo</BaseType>
+            <ArrayInfo>
+              <LBound>1</LBound>
+              <Elements>1</Elements>
+            </ArrayInfo>
+            <Default>
+              <SubItem>
+                <Name>[1].LicenseId.Data1</Name>
+                <Value>3165056522</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data2</Name>
+                <Value>40161</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data3</Name>
+                <Value>19775</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[0]</Name>
+                <Value>152</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[1]</Name>
+                <Value>202</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[2]</Name>
+                <Value>65</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[3]</Name>
+                <Value>58</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[4]</Name>
+                <Value>188</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[5]</Name>
+                <Value>13</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[6]</Name>
+                <Value>148</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseId.Data4[7]</Name>
+                <Value>253</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].Instances</Name>
+                <Value>0</Value>
+              </SubItem>
+              <SubItem>
+                <Name>[1].LicenseName</Name>
+                <String>TF6340 TC3 Serial-Communication</String>
+              </SubItem>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634273024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -25719,21 +28780,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634056544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
-            <BitSize>32</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-            <Properties>
-              <Property>
-                <Name>no_init</Name>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>634058592</BitOffs>
+            <BitOffs>634274048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -25751,7 +28798,21 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634058624</BitOffs>
+            <BitOffs>634276096</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+            <Properties>
+              <Property>
+                <Name>no_init</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634277120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -25765,7 +28826,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634059648</BitOffs>
+            <BitOffs>634277152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -25786,7 +28847,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634059680</BitOffs>
+            <BitOffs>634277184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -25812,14 +28873,14 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634111200</BitOffs>
+            <BitOffs>634328704</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>79888384</ByteSize>
+          <ByteSize>80019456</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -25837,7 +28898,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576000</BitOffs>
+            <BitOffs>633577696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.AccumulatedFF</Name>
@@ -25856,7 +28917,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576032</BitOffs>
+            <BitOffs>633577728</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_GVL.BP_jsonDoc</Name>
@@ -25867,7 +28928,7 @@ RCC_VRC_02 : FB_VRC;</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633576064</BitOffs>
+            <BitOffs>633577760</BitOffs>
           </Symbol>
         </DataArea>
       </DataAreas>
@@ -25884,15 +28945,15 @@ RCC_VRC_02 : FB_VRC;</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-03-01T08:46:24</Value>
+          <Value>2024-09-19T10:33:34</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>536576</Value>
+          <Value>561152</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>78946304</Value>
+          <Value>78974976</Value>
         </Property>
       </Properties>
     </Module>

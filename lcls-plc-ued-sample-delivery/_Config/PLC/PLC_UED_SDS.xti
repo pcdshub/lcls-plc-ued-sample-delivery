@@ -1,90 +1,160 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{99A5CC11-3AD3-404B-9FF8-53771D83A09B}" Namespace="LCLS_General.Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
+			<Comment><![CDATA[ This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+]]></Comment>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name>Status</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>22</Elements>
+				</ArrayInfo>
+				<BitSize>176</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{89D30126-148D-4774-924F-DAB8A1D8BC13}" Namespace="LCLS_General.Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
+			<Comment><![CDATA[ This data type is corresponding to the
+   EL-6xxx data structure used in the
+   TwinCAT SystemManager
+   (EL-6xxx version using 22 data bytes) 
+]]></Comment>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name>Ctrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000004}">WORD</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>D</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000001}">BYTE</Type>
+				<ArrayInfo>
+					<LBound>0</LBound>
+					<Elements>22</Elements>
+				</ArrayInfo>
+				<BitSize>176</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+	</DataTypes>
 	<Project GUID="{7129E692-9D21-4808-8660-1DB3C3DFE164}" Name="PLC_UED_SDS" PrjFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.plcproj" TmcFilePath="..\..\PLC_UED_SDS\PLC_UED_SDS.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Sample_Delivery\Sample_Delivery.tmc" TmcHash="{A8605532-FF36-271F-C600-6D794A41248F}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_UED_SDS\PLC_UED_SDS.tmc" TmcHash="{D58E5B30-AEB2-A721-887E-BE731DE30872}">
 			<Name>PLC_UED_SDS Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.i_xClsLS</Name>
+					<Name>MAIN.fbValve.fbNporValve.stViciSerial.stComIn</Name>
+					<Type GUID="{99A5CC11-3AD3-404B-9FF8-53771D83A09B}" Namespace="LCLS_General.Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.SolenoidPairA.i_xEpics</Name>
+					<Comment><![CDATA[ open A when False, open B when True]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.SolenoidPairA.i_xDebug</Name>
+					<Comment><![CDATA[ if True, do not set valves according to i_xEpics]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_01.i_xClsLS</Name>
 					<Comment><![CDATA[IO
 	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.i_xClsLS</Name>
+					<Name>PRG_RCC.RCC_VRC_02.i_xClsLS</Name>
 					<Comment><![CDATA[IO
 	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.i_xClsLS</Name>
+					<Name>PRG_RCC.RCC_VRC_03.i_xClsLS</Name>
 					<Comment><![CDATA[IO
 	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.i_xClsLS</Name>
+					<Name>PRG_RCC.RCC_VRC_04.i_xClsLS</Name>
 					<Comment><![CDATA[IO
 	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.i_iPRESS_R</Name>
+					<Name>PRG_RCC.RCC_GCP_01.i_iPRESS_R</Name>
 					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-					<Type>REAL</Type>
+					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_GCP_01.bWcstate</Name>
-					<Comment><![CDATA[ 0: date valid, 1: date invalid]]></Comment>
+					<Name>PRG_RCC.RCC_STC_01.bError</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bError</Name>
+					<Name>PRG_RCC.RCC_STC_01.bUnderrange</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bUnderrange</Name>
+					<Name>PRG_RCC.RCC_STC_01.bOverrange</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_STC_01.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_RCC.RCC_STC_01.iRaw</Name>
+					<Name>PRG_RCC.RCC_STC_01.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_01.q_xOPN_DO</Name>
+					<Name>MAIN.fbValve.fbNporValve.stViciSerial.stComOut</Name>
+					<Type GUID="{89D30126-148D-4774-924F-DAB8A1D8BC13}" Namespace="LCLS_General.Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.SolenoidPairA.q_xDO1</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+					<Name>MAIN.SolenoidPairA.q_xDO2</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+					<Name>MAIN.PURGE_VRC_01_CTL</Name>
+					<Comment><![CDATA[ Purge Valves]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_RCC.RCC_VRC_04.q_xOPN_DO</Name>
+					<Name>MAIN.PURGE_VRC_02_CTL</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_RCC.RCC_VRC_04.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -108,6 +178,142 @@
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
+			<UnrestoredVarLinks ImportTime="2024-08-21T11:12:19">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" Size="8" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" Size="8" OffsA="8" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" Size="8" OffsA="80" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" Size="8" OffsA="88" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" Size="8" OffsA="96" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" Size="8" OffsA="104" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" Size="8" OffsA="112" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" Size="8" OffsA="120" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" Size="8" OffsA="128" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" Size="8" OffsA="136" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" Size="8" OffsA="144" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" Size="8" OffsA="152" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" Size="8" OffsA="16" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" Size="8" OffsA="160" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" Size="8" OffsA="168" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" Size="8" OffsA="24" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" Size="8" OffsA="32" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" Size="8" OffsA="40" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" Size="8" OffsA="48" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" Size="8" OffsA="56" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" Size="8" OffsA="64" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" Size="8" OffsA="72" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComIn^Status" TypeA="WORD" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000004}" VarB="COM TxPDO-Map Inputs Channel 1^Status" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^Ctrl" TypeA="WORD" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000004}" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" Size="8" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" Size="8" OffsA="8" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" Size="8" OffsA="80" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" Size="8" OffsA="88" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" Size="8" OffsA="96" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" Size="8" OffsA="104" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" Size="8" OffsA="112" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" Size="8" OffsA="120" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" Size="8" OffsA="128" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" Size="8" OffsA="136" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" Size="8" OffsA="144" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" Size="8" OffsA="152" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" Size="8" OffsA="16" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" Size="8" OffsA="160" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" Size="8" OffsA="168" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" Size="8" OffsA="24" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" Size="8" OffsA="32" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" Size="8" OffsA="40" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" Size="8" OffsA="48" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" Size="8" OffsA="56" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" Size="8" OffsA="64" RestoreInfo="ANotFound"/>
+						<Link VarA="Serial_Comm.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" Size="8" OffsA="72" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2024-08-23T14:20:30">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" Size="8" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" Size="8" OffsA="8" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" Size="8" OffsA="80" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" Size="8" OffsA="88" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" Size="8" OffsA="96" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" Size="8" OffsA="104" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" Size="8" OffsA="112" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" Size="8" OffsA="120" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" Size="8" OffsA="128" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" Size="8" OffsA="136" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" Size="8" OffsA="144" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" Size="8" OffsA="152" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" Size="8" OffsA="16" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" Size="8" OffsA="160" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" Size="8" OffsA="168" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" Size="8" OffsA="24" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" Size="8" OffsA="32" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" Size="8" OffsA="40" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" Size="8" OffsA="48" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" Size="8" OffsA="56" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" Size="8" OffsA="64" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" Size="8" OffsA="72" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" IdB="-132" Size="8" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" IdB="-133" Size="8" OffsA="8" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" IdB="-142" Size="8" OffsA="80" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" IdB="-143" Size="8" OffsA="88" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" IdB="-144" Size="8" OffsA="96" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" IdB="-145" Size="8" OffsA="104" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" IdB="-146" Size="8" OffsA="112" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" IdB="-147" Size="8" OffsA="120" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" IdB="-148" Size="8" OffsA="128" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" IdB="-149" Size="8" OffsA="136" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" IdB="-150" Size="8" OffsA="144" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" IdB="-151" Size="8" OffsA="152" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" IdB="-134" Size="8" OffsA="16" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" IdB="-152" Size="8" OffsA="160" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" IdB="-153" Size="8" OffsA="168" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" IdB="-135" Size="8" OffsA="24" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" IdB="-136" Size="8" OffsA="32" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" IdB="-137" Size="8" OffsA="40" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" IdB="-138" Size="8" OffsA="48" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" IdB="-139" Size="8" OffsA="56" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" IdB="-140" Size="8" OffsA="64" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" TypeA="ARRAY [0..21] OF BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000300000016}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" IdB="-141" Size="8" OffsA="72" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2024-08-26T15:06:07">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)">
+						<Link VarA="GVL_RCC.RCC_VRC_02.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" IdB="-14" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_03.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" IdB="-15" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_04.i_xClsLS" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^Input" IdB="-16" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)">
+						<Link VarA="GVL_RCC.RCC_STC_01.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Overrange" IdB="74" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_STC_01.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Underrange" IdB="73" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_STC_01.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 1^Value" IdB="-24" AutoLink="true" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Prefix="TIPC^PLC_UED_SDS^PLC_UED_SDS Instance" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)">
+						<Link VarA="GVL_MAIN.PURGE_VRC_01_CTL" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.PURGE_VRC_02_CTL" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 12^Output" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_MAIN.SolenoidPairA.q_xDO2" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 10^Output" IdB="-56" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
+						<Link VarA="GVL_RCC.RCC_VRC_02.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Output" IdB="-9" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_03.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Output" IdB="-10" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_RCC.RCC_VRC_04.q_xOPN_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^Output" IdB="-11" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<Contexts>
 				<Context>
 					<Id NeedCalleeCall="true">0</Id>
@@ -126,23 +332,80 @@
 	</Project>
 	<Mappings>
 		<OwnerA Name="PLC_UED_SDS Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^BR Valves (EP2338-0001)">
+				<Link VarA="PlcTask Outputs^MAIN.PURGE_VRC_01_CTL" VarB="Channel 11^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.PURGE_VRC_02_CTL" VarB="Channel 12^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.SolenoidPairA.q_xDO1" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^MAIN.SolenoidPairA.q_xDO2" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Box 18 (EP9128-0021)^Term 24 (EP9128-2021)^4PortVICI Serial (EP6002-0002)">
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 0" Size="8"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 1" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 10" Size="8" OffsA="80"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 11" Size="8" OffsA="88"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 12" Size="8" OffsA="96"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 13" Size="8" OffsA="104"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 14" Size="8" OffsA="112"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 15" Size="8" OffsA="120"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 16" Size="8" OffsA="128"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 17" Size="8" OffsA="136"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 18" Size="8" OffsA="144"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 19" Size="8" OffsA="152"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 2" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 20" Size="8" OffsA="160"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 21" Size="8" OffsA="168"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 3" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 4" Size="8" OffsA="32"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 5" Size="8" OffsA="40"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 6" Size="8" OffsA="48"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 7" Size="8" OffsA="56"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 8" Size="8" OffsA="64"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^D" VarB="COM TxPDO-Map Inputs Channel 2^Data In 9" Size="8" OffsA="72"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbValve.fbNporValve.stViciSerial.stComIn^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^Ctrl" VarB="COM RxPDO-Map Outputs Channel 2^Ctrl" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 0" Size="8"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 1" Size="8" OffsA="8"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 10" Size="8" OffsA="80"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 11" Size="8" OffsA="88"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 12" Size="8" OffsA="96"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 13" Size="8" OffsA="104"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 14" Size="8" OffsA="112"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 15" Size="8" OffsA="120"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 16" Size="8" OffsA="128"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 17" Size="8" OffsA="136"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 18" Size="8" OffsA="144"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 19" Size="8" OffsA="152"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 2" Size="8" OffsA="16"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 20" Size="8" OffsA="160"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 21" Size="8" OffsA="168"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 3" Size="8" OffsA="24"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 4" Size="8" OffsA="32"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 5" Size="8" OffsA="40"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 6" Size="8" OffsA="48"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 7" Size="8" OffsA="56"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 8" Size="8" OffsA="64"/>
+				<Link VarA="PlcTask Outputs^MAIN.fbValve.fbNporValve.stViciSerial.stComOut^D" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" Size="8" OffsA="72"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E1 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Outputs^GVL_RCC.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_RCC.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_E2 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_GPI (EL3174-0002)">
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^RCC_TC (EL3314)">
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^GVL_RCC.RCC_STC_01.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_RCC.RCC_STC_01.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
